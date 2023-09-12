@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar{
+font-family: 'Poppins', sans-serif;    
+}
+
+.first-layer,
+.second-layer,
+.third-layer,
+.first-layer-left,
+.first-layer-right,
+.second-layer-one,
+.second-layer-two,
+.second-layer-three,
+.third-layer,
+.third-layer-two,
+.search-canvas,
+.third-layer-one{
+    display: flex;
+} 
+
+.first-layer{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 13.75em;
+    background: var(--gray-scale-white, #FFF);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 15.6px */
+    color: var(--gray-scale-gray-600, #666);
+}
+
+.first-layer-left{
+    
+    font-family: Poppins;
+    gap: 0.5em;
+}
+
+.first-layer-right{
+    gap: 1.25em;
+    border: none;
+    cursor: pointer;
+}
+
+.lang,.currency{
+    width: 4.1875em;
+    font-size: 1em;
+    border: none;
+    gap: 1.25em;
+}
+
+.second-layer{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 9.9em;
+    border-top: 1px solid #666666;
+}
+
+.second-layer-one{
+    color: var(--gren-gray-scale-900, #002603);
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px; /* 118.75% */
+    padding: 0.5em;
+    
+    
+}
+
+.second-layer-two {
+    width: 350px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-scale-gray-100, #E6E6E6);
+    padding: 0.75em 1em;
+    
+}
+
+.second-layer-two > input{
+   width: 300px;
+   border: none;
+}
+
+.srch-btn{
+    border-radius: 0px 6px 6px 0px;
+    width: 6.125em;
+    height: 2.875;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: -0.3em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    color: var(--gray-scale-white, #FFF);
+    background: var(--branding-success, #00B207);
+}
+
+.second-layer-three{
+      gap: 1em;
+}
+
+.secondlayer-liked{
+    border-right: 1px solid #CCCCCC;
+    padding-right: 1em;
+    cursor: pointer;
+}
+
+.second-layer-three > .cart-side > .shp-crt{
+    color: var(--gray-scale-gray-700, #4D4D4D);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 13.2px */
+    cursor: pointer;
+}
+
+.bag{
+    cursor: pointer;
+}
+
+.second-layer-three > .cart-side > .amnt{
+    color: var(--gray-scale-gray-900, #1A1A1A);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 14px */
+    cursor: pointer;
+}
+
+.third-layer{
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 10em;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    background: var(--gray-scale-gray-800, #333);
+    color: #999999;
+    
+}
+.third-layer-one{
+    gap: 2em;
+    cursor: pointer;
+}
+.nav-link{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    color: #999999;
+    cursor: pointer;
+}
+
+.third-layer-two{
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+    padding-right: 1em;
+}

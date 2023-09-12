@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+.main{
+    border-radius: 8px;
+    border: 2px solid var(--gray-scale-gray-100, #E6E6E6);
+    background: var(--gray-scale-white, #FFF);
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 1em;
+}
+
+.img-wrp{
+    padding: 1em 1em;
+}
+
+.item-name{
+    color: var(--gray-scale-gray-700, #4D4D4D);
+
+    /* Body Small/Body Small, 400 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    
+}
+
+.item-price{
+    color: var(--gray-scale-gray-900, #1A1A1A);
+
+    /* Body Medium/Body Medium, 500 */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    text-align: left;
+}

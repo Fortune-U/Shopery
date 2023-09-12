@@ -1,0 +1,165 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.footer-wrapper{
+    font-family:  Poppins;
+    font-style: normal;
+}
+
+section{
+    display: flex;
+
+}
+
+.section-one{
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray-scale-gray-50, #F2F2F2);
+    padding: 2em 4em;
+}
+
+.foot-logo{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.foot-logo > p {
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: -1.171px;
+    color: var(--gray-scale-gray-900, #1A1A1A);
+}
+
+.news-input{
+    border-radius: 46px;
+    border: 1px solid var(--gray-scale-gray-100, #E6E6E6);
+    background: var(--gray-scale-white, #FFF);
+    padding: 1em 1em;
+    width: 20em;
+    outline: none;
+}
+
+.subscribe{
+    border-radius: 43px;
+    padding: 1em 2em;
+    color: #FFFFFF;
+    border: none;
+    margin-left: -3em;
+    cursor: pointer;
+    background: var(--branding-success, #00B207);
+}
+
+.blk1{
+    color: var(--gray-scale-gray-900, #1A1A1A);
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.blk2-light{
+    font-size: 0.8em;
+    color: var(--gray-scale-gray-400, #999);
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.section-two{
+    padding: 2em 4em;
+    background-color: #1A1A1A;
+    justify-content: space-between;
+}
+
+.left-head{
+    color: var(--gray-scale-white, #FFF);
+    
+}
+
+.left-desc{
+    color: var(--gray-scale-gray-500, #808080);
+    font-weight: 400;
+    font-size: 0.75em;
+    width: 20em;
+    margin: 1em 0em;
+}
+
+.left > span {
+    display: flex;
+}
+
+.bold{
+    font-weight: 500;
+    color: var(--gray-scale-white, #FFF);
+    font-size: 0.75em;
+    gap: 0.2em;
+}
+
+.lighter{
+    color: var(--gray-scale-gray-500, #808080);
+    font-size: 0.75em;
+    font-weight: 400;
+    margin: 0em 0.2em;
+}
+
+h3{
+  color: #FFF;
+}
+
+ul{
+    color: #FFF;
+    list-style: none;
+    text-align: left;
+}
+
+li{
+    text-align: left;
+    color: #999;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.downloads{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+.downloads > div {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 1em 1em;
+    background: var(--gray-scale-gray-800, #333);
+}
+
+
+.section-three{
+    width: 70%;
+    background-color: #1A1A1A;
+    align-items: center;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 0.5em;
+    background: var(--gray-scale-gray-900, #1A1A1A);
+    box-shadow: 0px -1px 0px 0px #333;
+    padding: 1em 0em ;
+}
+.section-three > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-three > div > p{
+    padding: 0em 0.9em;
+}
+
+.section-three-box{
+    display: flex;
+    justify-content: center;
+    background-color: #1A1A1A;
+    padding: 1em 0em;
+}
