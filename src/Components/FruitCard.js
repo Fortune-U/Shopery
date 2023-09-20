@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import greyBag from '../Assets/addBag.png'
 import greenBag from '../Assets/Add To Cart.png'
-import apple from '../Assets/apple.png'
+// import apple from '../Assets/apple.png'
 import '../Styles/fruitcard.css'
 
-export default function FruitCard() {
+export default function FruitCard(props) {
+    console.log(props.card)
 
     const [add,setAdded] = useState({
             isAdded : false
@@ -25,12 +26,12 @@ export default function FruitCard() {
         
             <div className='main' style={divStyle}>
                 <div className='img-wrp'>
-                    <img src={apple} alt="" />
+                    <img src={props.card.productThumbnail} alt="" />
                 </div>
                 <div className='description'>
                     <div>
-                    <p className='item-name'>Green Apple</p>
-                    <p className='item-price'>$14.99</p>
+                    <p className='item-name'>{props.card.productName}</p>
+                    <p className='item-price'>${props.card.productPrice}</p>
                     <p className='rating'></p>
                     </div>
                

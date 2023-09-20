@@ -28,6 +28,7 @@ text-align: center;
 
 .product-card-container{
     display: flex;
+    align-self: start;
     justify-content: space-between;
     gap: 0.8em;
 
@@ -85,7 +86,7 @@ text-align: center;
 }
 
 .testimonial-wrapper{
-    padding: 1em 7em;
+    padding: 1em 3em;
     background: var(--gren-gray-scale-50, #EDF2EE);
 }
 .testimonial-top{
@@ -114,4 +115,11 @@ text-align: center;
     justify-content: space-between;
     align-items: center;
     padding: 1em 0em;
+}
+
+.ig-img-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 4em 4em 4em;
+    gap: 0.5em;
 }

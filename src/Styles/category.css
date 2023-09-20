@@ -9,6 +9,11 @@
 .category-wrapper > div{
     display: flex;
     justify-content: center;
+    
+}
+
+.category-wrapper > div>{
+ max-width: 40%;
 }
 
 .cat-txt1{
