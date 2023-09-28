@@ -23,6 +23,7 @@ export default function Hero() {
  const  [bestDealProdData,setBestDealProdData] = useState([]);
  const  [hotDealsProdData,setHotDealsProdData] = useState([]);
  const  [topRatedProdData,setTopRatedProdData] = useState([]);
+ const  [bannerData,setBannerData] = useState([]);
    
  useEffect(() => {
     
@@ -84,6 +85,18 @@ export default function Hero() {
       .then((data) => {
         setTopRatedProdData(data);
       })
+
+        //fetch banner api
+        fetch('https://shopery.onrender.com/api/v1/ads')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setBannerData(data);
+      })
       .catch((error) => {
         console.error('API Error:', error);
         // Handle the error, e.g., display an error message to the user
@@ -98,7 +111,7 @@ export default function Hero() {
 //    />);
 // })
 
-console.log(categoryData);
+
 
 
 
@@ -133,6 +146,13 @@ console.log(categoryData);
   const topRatedComponents = topRatedProdData.map(card=>{
     return(<ProductCard 
     key={card.uuid}
+    card={card}
+    />);
+  })
+
+  const BannerComponents = bannerData.map(card=>{
+    return(<Banner2 
+    key={card.id}
     card={card}
     />);
   })
@@ -177,9 +197,7 @@ console.log(categoryData);
             </div>
 
             <div className='banner-section2'>
-                    <Banner2 />
-                    <Banner2 />
-                    <Banner2 />
+                    {BannerComponents}
             </div>
             <div className='newest-wrapper'>
                 <span>

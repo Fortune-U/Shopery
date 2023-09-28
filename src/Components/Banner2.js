@@ -1,17 +1,19 @@
-import bannerImg from '../Assets/banner-img.png';
-import '../Styles/banner.css';
+//import bannerImg from '../Assets/banner-img.png';
+import '../Styles/banner2.css';
 
-export default function Banner() {
+export default function Banner(props) {
+  
     return(
-        <div className='banner-wrapper'>
-            <div className='banner-img-wrapper'>
-            <img src={bannerImg} alt='' />
+        <div className='banner-wrapper-2'>
+            <div className='banner-img-wrapper-2'>
+            <img src={props.card.image} alt='' />
             </div>
             
-            <p className='text1'>Summer Sale</p>
-            <p className='text2'>75% off</p>
-            <p></p>
-            <button className='banner-btn'>
+            <p className='text1-2'>{props.card.title}</p>
+            <p className='text2-2'>{props.card.description}</p>
+            {/* <p>{props.card.validFrom}</p>
+            <p>{props.card.offer}</p> */}
+            <button className='banner-btn-2'>
                 <p>Shop Now </p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
                     <path d="M16 7.18274H1" stroke="#00B307" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

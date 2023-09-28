@@ -1,7 +1,6 @@
 import '../Styles/category.css';
 
 export default function Category(props) {
-    console.log(props.card.categoryName);
     // {data.map((item) => 
     //     key = {item.id}
     //     )}

@@ -53,6 +53,7 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     padding: 1em 7em;
+    gap: 2.3em;
 }
 
 .newest-products{

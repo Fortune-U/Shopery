@@ -5,7 +5,6 @@ import greenBag from '../Assets/Add To Cart.png'
 import '../Styles/fruitcard.css'
 
 export default function FruitCard(props) {
-    console.log(props.card)
 
     const [add,setAdded] = useState({
             isAdded : false
