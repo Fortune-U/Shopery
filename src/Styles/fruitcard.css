@@ -11,6 +11,7 @@
     border-radius: 8px;
     border: 2px solid var(--gray-scale-gray-100, #E6E6E6);
     background: var(--gray-scale-white, #FFF);
+    cursor: pointer;
 }
 
 .description{
@@ -22,6 +23,7 @@
 
 .img-wrp{
     padding: 1em 1em;
+    position: relative;
 }
 
 .item-name{
@@ -46,4 +48,15 @@
     font-weight: 500;
     line-height: 150%; /* 24px */
     text-align: left;
+}
+
+.quick-actions{
+    display: flex;
+    
+    position:absolute;
+    top: 10%;
+    right: 10%;
+   
+    flex-direction: column;
+    gap: 0.5em;
 }

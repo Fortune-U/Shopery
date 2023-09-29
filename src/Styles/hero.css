@@ -24,6 +24,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.5em;
 }
 
 .product-card-container{
@@ -107,8 +108,13 @@ text-align: center;
     border: 1px solid #E6E6E6;
     background-color: var(--gray-scale-white, #FFF);
     align-items: center;
+    cursor: pointer;
     
     
+}
+
+.testimonial-top > p > button:hover{
+    background-color: #00B207;
 }
 
 .testimony{

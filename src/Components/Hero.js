@@ -1,5 +1,6 @@
-//import AliceCarousel from 'react-alice-carousel';
+import AliceCarousel from 'react-alice-carousel';
 import { useEffect, useState } from 'react';
+import { useRef } from 'react';
 import '../Styles/hero.css'
 import FruitCard from './FruitCard';
 import ProductCard from './ProductCard';
@@ -157,6 +158,33 @@ export default function Hero() {
     />);
   })
 
+
+  const TestimonialItems = [
+    <TestimonialCard />,
+    <TestimonialCard />,
+    <TestimonialCard />,
+    <TestimonialCard />,
+    <TestimonialCard />,
+    <TestimonialCard />,
+    <TestimonialCard />,
+  ]
+
+  const carouselRef = useRef(null);
+
+  const handlePrevClick = () => {
+    if (carouselRef.current) {
+      carouselRef.current.slidePrev();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (carouselRef.current) {
+      carouselRef.current.slideNext();
+    }
+  };
+   
+  
+  
         
       
     return(
@@ -222,13 +250,13 @@ export default function Hero() {
                 <div className='testimonial-top'> 
               <p className='title-text'>Client Testimonial</p>
               <p className='test-btn'>
-                <button>
+                <button onClick={handlePrevClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 17 15" fill="none">
                     <path d="M1.25 7.72583H16.25" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M7.2998 1.70093L1.2498 7.72493L7.2998 13.7499" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </button>
-                <button>
+                <button onClick={handleNextClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 17 15" fill="none">
                     <path d="M15.75 7.72583H0.75" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M9.7002 1.70093L15.7502 7.72493L9.7002 13.7499" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -237,9 +265,24 @@ export default function Hero() {
               </p>
               </div>
               <div className='testimony'>
-                <TestimonialCard />
-                <TestimonialCard />
-                <TestimonialCard />
+                <AliceCarousel items={TestimonialItems} activeIndex={0} ref={carouselRef} autoPlay
+                autoPlayInterval={2000}  infinite
+                disableButtonsControls disableDotsControls 
+                 responsive={
+        
+                  {
+                    0: {
+                      
+                        items: 3,
+                        itemsFit: 'contain'
+                        
+                    },
+                    
+                  }
+                 }
+                />
+              
+               
               </div>
             </div>
 

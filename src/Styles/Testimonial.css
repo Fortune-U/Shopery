@@ -1,5 +1,4 @@
 .test-wrapper{
-    width: 35%;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -65,4 +64,8 @@ line-height: 150%; /* 21px */
 
 .rating{
     margin-left: 2em;
+    display: flex;
+    align-items: center;
+
 }
+
