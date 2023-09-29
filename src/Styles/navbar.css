@@ -85,6 +85,7 @@ font-family: 'Poppins', sans-serif;
 .second-layer-two > input{
    width: 300px;
    border: none;
+   outline: none;
 }
 
 .srch-btn{

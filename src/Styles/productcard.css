@@ -20,9 +20,19 @@
 
  .desc-space{
     margin: 0em 0em;
+    position: relative;
  }
 
  .name{
     color: var(--gray-scale-gray-700, #4D4D4D);
     font-size: 0.75em;
+    margin-bottom: 0.6em;
+ }
+
+ .product-options{
+   position: absolute;
+   display: flex;
+   gap: 0.3em;
+   top: 40%;
+   left: -5%;
  }
