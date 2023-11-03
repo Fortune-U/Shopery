@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from '@reduxjs/toolkit';
+// import { store } from '../src/redux/store';
+import { Provider } from 'react-redux';
+import priceRangeReducer from './features/priceRange';
+import categorizeReducer from './features/categorize';
+import ratingReducer from './features/rating';
+import tagReducer from './features/tag';
+
+ const store = configureStore({
+  reducer: {
+    priceRange : priceRangeReducer,
+    categorize : categorizeReducer,
+    rating : ratingReducer,
+    tag : tagReducer,
+  },
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>,
   </React.StrictMode>
 );
 

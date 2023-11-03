@@ -4,6 +4,9 @@ import greenBag from '../Assets/Add To Cart.png'
 import wishListGrey from '../Assets/Add To wishlist.png'
 import wishListRed from '../Assets/Add To wishlist red.png'
 import quickView from '../Assets/Quick View.png'
+import ProductQuickView from './ProductQuickView'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 // import apple from '../Assets/apple.png'
 import '../Styles/fruitcard.css'
 
@@ -132,9 +135,9 @@ switch (rating) {
     stars = <div></div>;
 }
 
-console.log(props.card.productRating);
 
-        console.log(props.card.productRating);
+
+  
     return(
         
             <div className='main' style={divStyle} onMouseEnter={handleMouseEntered} onMouseLeave={handleMouseLeave}>
@@ -142,7 +145,10 @@ console.log(props.card.productRating);
                     <img src={props.card.productThumbnail} alt="" />
                     <div className='quick-actions' style={quickViewStyle} >
                         <img src={WishlistIcon} alt='' onClick={toggleAddToWishlist} />
-                        <img src={quickView} alt='' />
+                        <Popup trigger={<img src={quickView} alt='' />}>
+                        
+                        <div><ProductQuickView /></div>
+                        </Popup>
                     </div>
                 </div>
                 <div className='description'>

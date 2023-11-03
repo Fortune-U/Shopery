@@ -4,6 +4,8 @@
 }
 .filters-panel{
     width: 25%;
+    display: block;
+    padding: 0.5em 0.5em;
 }
 
 .shop-products-panel{
@@ -32,6 +34,17 @@
     display: flex;
     gap: 1em;
     align-items: normal;
+}
+
+.sort-by > p {
+    color: var(--gray-scale-gray-500, #808080);
+
+/* Body Small/Body Small, 400 */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
 }
 .filter-disp{
     border-radius: 43px;
@@ -65,6 +78,50 @@ cursor: pointer;
     gap: 0.4em;
 }
 
+.results{
+    color: var(--gray-scale-gray-600, #666);
+    display: flex;
+    gap: 0.2em;
+    /* Body Medium/Body Medium, 400 */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.results > p{
+    font-weight: 600;
+    color: var(--gray-scale-gray-900, #1A1A1A);
+}
+
+.cat-dropdown-button,.price-dropdown, .rating-dropdown,  .tags-drp, .sale-prd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: #fff;
+    color: var(--gray-scale-gray-900, #1A1A1A);
+    /* border: none; */
+    width: 100%;
+/* Body XL/Body XL, 500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    cursor: pointer;
+    margin-top: 0.5em;
+  }
+
+  .banner{
+    margin-top: 0.5em;
+  }
+ .sale-products{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em
+ }
 
 /* DropdownMenu.css */
 /* .dropdown {
