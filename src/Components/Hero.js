@@ -125,28 +125,28 @@ export default function Hero() {
 
   const featuredComponents = featuredProdData.map(card=>{
     return(<FruitCard 
-    key={card.uuid}
+    key={card.id}
     card={card}
     />);
   })
 
   const bestSellerComponents = bestDealProdData.map(card=>{
     return(<ProductCard 
-    key={card.uuid}
+    key={card.id}
     card={card}
     />);
   })
 
   const hotDealsComponents = hotDealsProdData.map(card=>{
     return(<ProductCard 
-    key={card.uuid}
+    key={card.id}
     card={card}
     />);
   })
 
   const topRatedComponents = topRatedProdData.map(card=>{
     return(<ProductCard 
-    key={card.uuid}
+    key={card.id}
     card={card}
     />);
   })
