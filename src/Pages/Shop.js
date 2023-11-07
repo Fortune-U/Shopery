@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import NavBar from "../Components/NavBar";
+//import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import FruitCard from "../Components/FruitCard";
 import Banner from "../Components/Banner";
@@ -133,7 +133,7 @@ const toggleElement = (element) => {
     return(
 
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="top-area">
         <p className="filter-disp">Filter{filter}</p>
         <div className="sort-wrapper">

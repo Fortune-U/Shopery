@@ -4,8 +4,10 @@ import greenBag from '../Assets/Add To Cart.png'
 import wishListGrey from '../Assets/Add To wishlist.png'
 import wishListRed from '../Assets/Add To wishlist red.png'
 import quickView from '../Assets/Quick View.png'
-import ProductQuickView from './ProductQuickView'
+//import ProductQuickView from './ProductQuickView'
+import ProdQuickview from './ProdQuickview'
 import Popup from 'reactjs-popup';
+//import Warper from './Warper';
 import 'reactjs-popup/dist/index.css';
 // import apple from '../Assets/apple.png'
 import '../Styles/fruitcard.css'
@@ -135,7 +137,9 @@ switch (rating) {
     stars = <div></div>;
 }
 
-
+ //pop controls
+ const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false)
 
   
     return(
@@ -145,9 +149,10 @@ switch (rating) {
                     <img src={props.card.productThumbnail} alt="" />
                     <div className='quick-actions' style={quickViewStyle} >
                         <img src={WishlistIcon} alt='' onClick={toggleAddToWishlist} />
-                        <Popup trigger={<img src={quickView} alt='' />}>
+                        <img src={quickView} alt='' onClick={() => setOpen(o => !o)} />
+                        <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
                         
-                        <div><ProductQuickView /></div>
+                        <ProdQuickview />
                         </Popup>
                     </div>
                 </div>

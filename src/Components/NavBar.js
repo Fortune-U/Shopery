@@ -1,6 +1,13 @@
 import '../Styles/navbar.css';
+import { useState } from 'react'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import SideCart from './SideCart';
+import { Outlet, Link } from "react-router-dom"
 
 export default function NavBar() {
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false)
     return(
         <div className="navbar">
            <div className="first-layer">
@@ -59,13 +66,17 @@ export default function NavBar() {
                         <path d="M15.9995 28.5722C-10.6667 13.8333 7.99999 -2.16666 15.9995 7.95075C24 -2.16666 42.6666 13.8333 15.9995 28.5722Z" stroke="#1A1A1A" strokeWidth="1.5"/>
                         </svg>
                     </p>
-                    <p className='bag'> 
+                    <p className='bag' onClick={() => setOpen(o => !o)}> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
                         <path d="M11.3333 14.6667H7.08333L4.25 30.25H29.75L26.9167 14.6667H22.6667M11.3333 14.6667V10.4167C11.3333 7.28705 13.8704 4.75 17 4.75V4.75C20.1296 4.75 22.6667 7.28705 22.6667 10.4167V14.6667M11.3333 14.6667H22.6667M11.3333 14.6667V18.9167M22.6667 14.6667V18.9167" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </p>
                     <div className="cart-side">
-                        <p className='shp-crt'>Shopping cart:</p>
+                        <p className='shp-crt' >Shopping cart:</p>
+                        <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
+                        
+                        <SideCart />
+                        </Popup>
                         <p className='amnt'>$57.00</p>
                     </div>
                 </div>
@@ -73,10 +84,13 @@ export default function NavBar() {
             <div className="third-layer">
                 <div className="third-layer-one">
                     <ul className='nav-link'>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Blog</li>
+                        <li>
+                            <Link to='/'>Home</Link>
+                            </li>
+                        <li>
+                           <Link to="/shop">Shop</Link> 
+                            </li>
+                        <li><Link to="/">Blog</Link> </li>
                         <li>Pages</li>
                         <li>About Us</li>
                         <li>Contact Us</li>
@@ -92,6 +106,8 @@ export default function NavBar() {
                     <p>(219) 555-0114</p>
                 </div>
             </div>
+
+            <Outlet />
         </div>
         
     );
