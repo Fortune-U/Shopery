@@ -5,15 +5,13 @@
 .banner-wrapper-2{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .banner-wrapper-2 > .text1-2{
     position: absolute;
     top: 10%;
-    left: 40%;
-    /* text-align: center; */
     color: var(--gray-scale-gray-900, #ffffff);
     align-items: center;
 
@@ -32,14 +30,14 @@
 .banner-wrapper-2 > .text2-2{
     position: absolute;
     top: 15%;
-    left: 4%;
-     text-align: center; 
+    display: flex;
+    justify-content: center;
     color: var(--branding-success, #00B207);
     /* text-align: center; */
     
     /* Heading 05/Heading 05 — 600 */
     font-family: Poppins;
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 38.4px */
@@ -49,8 +47,7 @@
 
 .banner-btn-2{
     position: absolute;
-    left: 32%;
-    top: 50%;
+    top: 40%;
     border-radius: 43px;
     background: var(--gray-scale-white, #FFF);
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);

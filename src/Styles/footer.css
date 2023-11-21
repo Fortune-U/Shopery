@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -130,10 +130,16 @@ li{
 .downloads > div {
     display: flex;
     align-items: center;
+    gap: 0.2em;
     border-radius: 4px;
     cursor: pointer;
     padding: 1em 1em;
     background: var(--gray-scale-gray-800, #333);
+}
+
+.downloads > div > span{
+    display: block;
+    text-align: left;
 }
 
 

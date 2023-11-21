@@ -84,15 +84,10 @@ export default function NavBar() {
             <div className="third-layer">
                 <div className="third-layer-one">
                     <ul className='nav-link'>
-                        <li>
-                            <Link to='/'>Home</Link>
-                            </li>
-                        <li>
-                           <Link to="/shop">Shop</Link> 
-                            </li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to="/shop">Shop</Link> </li>
                         <li><Link to="/">Blog</Link> </li>
-                        <li>Pages</li>
-                        <li>About Us</li>
+                        <li><Link to="/about">About Us</Link></li>
                         <li>Contact Us</li>
                     </ul>
 

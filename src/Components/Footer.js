@@ -1,5 +1,5 @@
 import '../Styles/footer.css'
-export default function() {
+export default function Footer() {
     return(
         <div className="footer-wrapper">
             <section className='section-one'>
@@ -99,7 +99,7 @@ export default function() {
                         </clipPath>
                     </defs>
                     </svg>
-                    <span>
+                    <span className='dwnd-span'>
                         <p className='lighter'>Download on the</p>
                         <p className='bold'>Google Play</p>
                     </span>

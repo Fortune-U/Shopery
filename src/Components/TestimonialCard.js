@@ -31,20 +31,20 @@ export default function TestimonialCard() {
                 <p className='prof-img-ctn'>
                     <img src={profile} alt="" />
                 </p>
-                    <span>
+                    <span className='span-blk'>
                     <p className='c-name'>Robert Fox</p>
                     <p className='c-status'>Customer</p>
                     </span>
 
-                    <span className='rating'>
+                    
+                </div>
+                <span className='rating'>
                     {onStar}
                     {onStar}
                     {onStar}
                     {onStar}
                     {offStar}                  
                 </span>
-                </div>
-                
                 
             </div>
             </div>

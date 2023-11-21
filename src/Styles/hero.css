@@ -38,8 +38,11 @@ text-align: center;
 
 .mid-wrapper{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
     padding: 2em 7em;
+    
     
     
 }

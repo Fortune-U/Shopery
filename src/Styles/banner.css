@@ -4,16 +4,15 @@
  }
 .banner-wrapper{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .banner-wrapper > .text1{
     position: absolute;
     top: 10%;
-    left: 35%;
     text-align: center;
     color: var(--gray-scale-gray-900, #1A1A1A);
     text-align: center;
-
-    /* CAPS LOCK/Small Caps Lock */
     font-family: Poppins;
     font-size: 12px;
     font-style: normal;
@@ -44,7 +43,6 @@
 
 .banner-btn{
     position: absolute;
-    left: 28%;
     top: 30%;
     border-radius: 43px;
     background: var(--gray-scale-white, #FFF);
