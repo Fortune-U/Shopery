@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './Pages/Home';
@@ -6,6 +7,8 @@ import About from "./Pages/About";
 import ProductDescription from './Pages/ProductDescripton';
 import './App.css';
 import NavBar from "./Components/NavBar";
+import Blog from "./Pages/Blog";
+import ContactUs from "./Pages/ContactUs";
 
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
       <Route path="shop" element={<Shop />} />
       <Route path="productdescription" element={<ProductDescription />} />
       <Route path="about" element={<About />} />
+      <Route path="blog" element={<Blog />} />
+      <Route path="contactus" element={<ContactUs />} />
     </Route>
     </Routes>
     </BrowserRouter>

@@ -2,8 +2,8 @@ import Footer from "../Components/Footer";
 import AliceCarousel from 'react-alice-carousel';
 import TestimonialCard from "../Components/TestimonialCard";
 import '../Styles/about.css'
-import img1 from '../Assets/abt-img1.png'
-import img2 from '../Assets/abt-img2.png'
+import img1 from '../Assets/ima-enoch-SAzxVLbZWkk-unsplash (1).jpg'
+import img2 from '../Assets/omotayo-tajudeen-ME416b6sp2I-unsplash (1).jpg'
 import { useRef } from 'react';
 
 
@@ -38,24 +38,27 @@ export default function About () {
              
 
               <div className="about-disp">
-                <div>
-                  <p>100% Trusted Organic Food Store</p>
-                  <p>Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a eros non massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.
+                <div className="abt-hd-txt">
+                  <p className="abt-p1">100% Trusted Organic Food Store</p>
+                  <p className="abt-p2">We believe that a healthy lifestyle begins with the choices we make every day. Founded on the principles of sustainability, health, and convenience, we are your trusted partner in providing fresh, organic, and wholesome groceries right at your doorstep.
                   </p>
                 </div>
-                <div>
+                <div >
                   <img src={img1} alt="" />
                 </div>
               </div>
               <div>
                 <div className="about-disp2">
-               <div>
+               <div className="abt-img-ctn">
                 <img src={img2} alt="" />
                </div>
                <div>
                <div>
-                <p>100% Trusted Organic Food Store</p>
-                <p>Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus neque. Duis non diam eget est luctus tincidunt a a mi. Nulla eu eros consequat tortor tincidunt feugiat. </p>
+                <div className="abt2-title">
+                <p className="abt-p3">Why Choose Eko-bazar ?</p>
+                <p className="abt-p4">What sets us apart is our commitment to sourcing from local farmers and producers who share our dedication to organic farming practices. By choosing Eko-bazar, you are not only prioritizing your health but also supporting local communities and promoting sustainable agriculture. </p>
+                </div>
+                
                 <div className="stuff-ctn" >
 
                 <div>
@@ -66,7 +69,7 @@ export default function About () {
 
                  
 
-                  <div>
+                  <div className="abt-blk1">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <g clip-path="url(#clip0_604_20508)">
@@ -80,12 +83,12 @@ export default function About () {
                     </svg>
                     </div>
                     <div>
-                      <p>100% Organic food</p>
-                      <p>100% healthy & Fresh food.</p>
+                      <p className="p-bld">100% Organic food</p>
+                      <p className="p-light">100% healthy & Fresh food.</p>
                     </div>
                   </div>
 
-                  <div>
+                  <div className="abt-blk2">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <g clip-path="url(#clip0_604_20469)">
@@ -107,20 +110,20 @@ export default function About () {
 </svg>
                     </div>
                     <div>
-                      <p>Customer Feedback</p>
-                      <p>Our happy customer</p>
+                      <p className="p-bld">Customer satisfaction</p>
+                      <p className="p-light">Over 20k happy customers</p>
                     </div>
                   </div>
 
-                  <div>
+                  <div className="abt-blk3">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <path d="M32.7021 26.3041C31.7247 26.3041 30.7962 26.687 30.0957 27.3793C29.3952 28.0798 29.0043 28.992 29.0043 29.9694C29.0043 30.9468 29.3871 31.859 30.0957 32.5595C30.8043 33.2518 31.7247 33.6346 32.7021 33.6346C34.7058 33.6346 36.3348 31.9893 36.3348 29.9694C36.3348 27.9494 34.7058 26.3041 32.7021 26.3041ZM32.7021 32.0056C31.5781 32.0056 30.6333 31.0771 30.6333 29.9694C30.6333 28.8617 31.5781 27.9331 32.7021 27.9331C33.8098 27.9331 34.7058 28.8454 34.7058 29.9694C34.7058 31.0934 33.8098 32.0056 32.7021 32.0056ZM33.6469 14.0948C33.5003 13.9564 33.3048 13.8831 33.1012 13.8831H28.9228C28.4749 13.8831 28.1083 14.2496 28.1083 14.6975V21.3764C28.1083 21.8244 28.4749 22.1909 28.9228 22.1909H35.5528C36.0008 22.1909 36.3673 21.8244 36.3673 21.3764V16.9048C36.3673 16.6768 36.2696 16.4569 36.0986 16.3021L33.6469 14.0948ZM34.7383 20.5619H29.7373V15.5039H32.7835L34.7383 17.2632V20.5619ZM12.8121 26.3041C11.8347 26.3041 10.9061 26.687 10.2057 27.3793C9.50519 28.0798 9.11423 28.992 9.11423 29.9694C9.11423 30.9468 9.49705 31.859 10.2057 32.5595C10.9143 33.2518 11.8347 33.6346 12.8121 33.6346C14.8157 33.6346 16.4447 31.9893 16.4447 29.9694C16.4447 27.9494 14.8157 26.3041 12.8121 26.3041ZM12.8121 32.0056C11.688 32.0056 10.7432 31.0771 10.7432 29.9694C10.7432 28.8617 11.688 27.9331 12.8121 27.9331C13.9198 27.9331 14.8157 28.8454 14.8157 29.9694C14.8157 31.0934 13.9198 32.0056 12.8121 32.0056ZM7.37935 27.306H5.74221V25.1394C5.74221 24.6914 5.37569 24.3249 4.92771 24.3249C4.47974 24.3249 4.11322 24.6914 4.11322 25.1394V28.1205C4.11322 28.5684 4.47974 28.935 4.92771 28.935H7.37935C7.82733 28.935 8.19385 28.5684 8.19385 28.1205C8.19385 27.6725 7.82733 27.306 7.37935 27.306ZM11.5089 22.867C11.5089 22.419 11.1423 22.0525 10.6944 22.0525H0.814498C0.366524 22.0525 0 22.419 0 22.867C0 23.3149 0.366524 23.6815 0.814498 23.6815H10.6944C11.1423 23.6815 11.5089 23.3231 11.5089 22.867ZM2.46793 19.9266L12.3478 19.9836C12.7958 19.9836 13.1623 19.6253 13.1704 19.1773C13.1786 18.7212 12.8121 18.3546 12.3641 18.3546L2.48422 18.2976C2.47607 18.2976 2.47607 18.2976 2.47607 18.2976C2.0281 18.2976 1.66158 18.656 1.66158 19.104C1.65343 19.5601 2.01996 19.9266 2.46793 19.9266ZM4.12951 16.2288H14.0094C14.4573 16.2288 14.8239 15.8623 14.8239 15.4143C14.8239 14.9663 14.4573 14.5998 14.0094 14.5998H4.12951C3.68153 14.5998 3.31501 14.9663 3.31501 15.4143C3.31501 15.8623 3.68153 16.2288 4.12951 16.2288ZM39.6986 15.1292L33.8668 10.2993C33.7202 10.1771 33.541 10.1119 33.3456 10.1119H26.4875V7.17973C26.4875 6.73176 26.121 6.36523 25.673 6.36523H4.92771C4.47974 6.36523 4.11322 6.73176 4.11322 7.17973V13.1419C4.11322 13.5898 4.47974 13.9564 4.92771 13.9564C5.37569 13.9564 5.74221 13.5898 5.74221 13.1419V7.99423H24.8666V27.306H18.1877C17.7398 27.306 17.3732 27.6725 17.3732 28.1205C17.3732 28.5684 17.7398 28.935 18.1877 28.935H28.1328C28.5807 28.935 28.9473 28.5684 28.9473 28.1205C28.9473 27.6725 28.5807 27.306 28.1328 27.306H26.4956V11.7409H33.0605L38.371 16.1392L38.314 27.2897H37.4669C37.0189 27.2897 36.6524 27.6562 36.6524 28.1042C36.6524 28.5522 37.0189 28.9187 37.4669 28.9187H39.1203C39.5683 28.9187 39.9348 28.5603 39.9348 28.1123L40 15.7645C39.9919 15.5202 39.886 15.284 39.6986 15.1292Z" fill="#00B307"/>
 </svg>
                     </div>
                     <div>
-                      <p>Free Shipping</p>
-                      <p>Free shipping with discount</p>
+                      <p className="p-bld">Doorstep delivery</p>
+                      <p className="p-light">Hassle free door deliveries</p>
                     </div>
                   </div>
 
@@ -128,10 +131,10 @@ export default function About () {
                   </div>
                </div>      
                   
-
+<div>
                  
 
-                  <div>
+                  <div className="abt-blk4">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
   <g clip-path="url(#clip0_604_20407)">
@@ -145,12 +148,12 @@ export default function About () {
 </svg>
                     </div>
                     <div>
-                      <p>Great Support 24/7</p>
-                      <p>Instant access to Contact</p>
+                      <p className="p-bld">Great Support 24/7</p>
+                      <p className="p-light">Instant access to Contact</p>
                     </div>
                   </div>
 
-                  <div>
+                  <div className="abt-blk5">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
   <g clip-path="url(#clip0_604_20415)">
@@ -165,12 +168,12 @@ export default function About () {
 </svg>
                     </div>
                     <div>
-                      <p>100% Sucure Payment</p>
-                      <p>We ensure your money is save</p>
+                      <p className="p-bld">100% Sucure Payment</p>
+                      <p className="p-light">We ensure your money is save</p>
                     </div>
                   </div>
 
-                  <div>
+                  <div className="abt-blk6">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
   <g clip-path="url(#clip0_604_20425)">
@@ -184,14 +187,14 @@ export default function About () {
 </svg>
                     </div>
                     <div>
-                      <p>100% Organic Food</p>
-                      <p>100% healthy & Fresh food.</p>
+                      <p className="p-bld">Environmental Responsibility</p>
+                      <p className="p-light">100% Eco-friendly packaging.</p>
                     </div>
                   </div>
 
                   </div>
 
-                  
+                  </div>
                   
 
                 </div>
@@ -203,7 +206,7 @@ export default function About () {
               </div>
 
 
-
+             
 
 
               <div className='testimonial-wrapper'>
@@ -245,7 +248,7 @@ export default function About () {
                
               </div>
             </div>
-            <div>
+            <div className="brands-wrked">
             <svg xmlns="http://www.w3.org/2000/svg" width="82" height="32" viewBox="0 0 82 32" fill="none">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00036 8.70355C8.61529 8.1764 9.40674 7.91258 10.1099 7.91258C11.429 7.91258 12.7476 8.52799 14.0662 9.58278L14.6816 10.1104L16.4396 7.64877L15.9998 7.20891C14.3296 5.80253 12.5716 5.09886 10.5493 5.09886C9.05467 5.09886 7.64828 5.62649 6.2419 6.50572C4.83552 7.47273 3.95629 8.70307 3.69247 10.1977C3.34088 11.7801 3.69247 13.1865 4.83552 14.2413C5.53871 14.945 6.68176 15.5604 8.35196 16.2631C9.58278 16.7907 10.3738 17.2301 10.7253 17.5822C11.1652 18.1098 11.3408 18.812 11.1652 19.6918C10.9892 20.5705 10.5498 21.2742 9.75834 21.7136C9.05515 22.2412 8.2637 22.4172 7.47273 22.4172C5.62649 22.4172 4.04455 21.6258 2.63721 19.8673L2.19783 19.2529L0 21.6258L0.439854 22.0651C1.14305 22.9449 2.10957 23.6485 3.3404 24.263C4.65948 24.8784 5.88983 25.2309 7.12065 25.2309C8.70307 25.2309 10.1095 24.7906 11.4281 23.8236C12.9222 22.8566 13.8897 21.5375 14.1535 19.8673C14.5929 18.1098 14.1535 16.7025 13.0105 15.5604C12.3951 14.945 11.1642 14.2413 9.40578 13.5381H9.318C7.29621 12.6589 6.41698 11.6919 6.59254 10.6371C6.76954 9.84612 7.20939 9.14293 8.00036 8.70355ZM26.198 0H23.2092L21.9783 5.53823H17.9347L17.3193 8.2637H21.3634L19.1656 18.7252C18.6379 21.0981 18.814 22.8566 19.781 23.9114C20.3964 24.7901 21.5394 25.2305 23.0341 25.2305C25.7591 25.2305 28.1329 23.7353 30.2425 20.7465L30.8579 19.8668L27.8691 19.1641L27.6053 19.6035C26.2862 21.4493 24.8803 22.4167 23.3857 22.4167C22.7703 22.4167 22.3304 22.3285 22.0666 21.9774C21.8028 21.6253 21.715 20.9216 21.9783 19.9546L24.44 8.26274H30.9457L31.5611 5.53727H24.9671L26.198 0ZM46.5934 7.03335C45.5386 5.71427 44.1313 5.09886 42.286 5.09886C39.6483 5.09886 37.3627 6.24142 35.5164 8.35196C33.934 10.1982 32.8792 12.4838 32.3516 15.121C31.4724 18.6374 31.9117 21.2747 33.4064 23.2082C34.549 24.5273 36.1319 25.2309 38.2414 25.2309C40.0877 25.2309 42.4606 24.7024 45.186 23.5607L45.8015 23.2964L45.0978 20.3081L44.3073 20.7475C42.1977 21.8905 40.2632 22.4177 38.593 22.4177C37.3622 22.4177 36.4834 22.0656 35.9558 21.4497C35.0766 20.4827 34.8128 18.7252 35.1644 16.1753H47.3839L47.5599 15.5604C48.3509 11.6924 47.9993 8.79133 46.5934 7.03335ZM41.8452 7.9121C42.8131 7.9121 43.6036 8.2637 44.219 9.05515C45.0105 10.1104 45.2738 11.5168 44.9227 13.3626H35.7798C36.2196 11.8679 37.0106 10.6371 38.0659 9.5823C39.2967 8.52751 40.527 7.9121 41.8452 7.9121ZM59.2518 5.09886C57.4943 5.09886 55.9109 5.71427 54.5928 6.94509V5.01156L51.6035 5.45093V6.1546C51.7795 7.91258 51.6035 10.0226 51.0759 12.3082L46.8562 32H49.9338L51.603 24.2635C52.6974 24.9006 53.9418 25.2347 55.2082 25.2314C57.054 25.2314 58.9002 24.44 60.5709 23.0336C62.7687 21.1869 64.1751 18.7262 64.8783 15.4731C65.6688 11.8689 65.3177 9.14389 63.7352 7.20939C62.5927 5.80253 61.0985 5.09886 59.2518 5.09886ZM54.329 11.0769C55.8241 8.96737 57.3182 7.9121 58.9007 7.9121C59.8677 7.9121 60.6591 8.35196 61.2736 9.05515C62.3284 10.286 62.4166 12.3078 61.889 15.0328C61.2736 18.1098 60.0432 20.2194 58.1087 21.4497C57.1417 22.0651 56.0869 22.4177 55.0322 22.4177C54.0652 22.4177 53.0986 21.9783 52.2189 21.0986L54.329 11.0769ZM74.5488 13.5386C72.4393 12.6594 71.4713 11.6924 71.7356 10.6376C71.9116 9.8466 72.351 9.14341 73.0537 8.70355C73.7574 8.1764 74.4611 7.91258 75.2515 7.91258C76.5706 7.91258 77.8888 8.52799 79.2078 9.58278L79.8232 10.1104L81.5817 7.64877L81.1423 7.20891C79.4721 5.80253 77.6254 5.09886 75.6919 5.09886C74.1968 5.09886 72.7904 5.62649 71.3835 6.50572C69.9771 7.47273 69.0984 8.70307 68.8346 10.1977C68.4835 11.7801 68.8346 13.1865 70.0654 14.2413C70.6808 14.8567 71.8239 15.5604 73.4941 16.2631L75.867 17.5822C76.3063 18.1098 76.4824 18.812 76.3063 19.6918C76.1313 20.5705 75.6036 21.2742 74.9 21.7136C74.1963 22.2412 73.4058 22.4172 72.6139 22.4172C70.7681 22.4172 69.1862 21.6258 67.8671 19.8673L67.3394 19.2529L65.2299 21.6258L65.581 22.0651C66.2847 22.9449 67.2512 23.6485 68.4825 24.263C69.7133 24.8784 71.0314 25.2309 72.2627 25.2309C73.8452 25.2309 75.2511 24.7906 76.5702 23.8236C78.0643 22.8566 79.0313 21.5375 79.2956 19.8673C79.735 18.1098 79.2956 16.7025 78.2408 15.5604C77.5372 14.9455 76.3063 14.2418 74.5488 13.5386Z" fill="#D8259B"/>
 </svg>

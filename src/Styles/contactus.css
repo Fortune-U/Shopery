@@ -1,0 +1,126 @@
+.cu-hd{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 4em;
+}
+
+.cu-hd > main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 8px;
+    background: var(--Gray-Scale-White, #FFF);
+    box-shadow: 0px 0px 56px 0px rgba(0, 38, 3, 0.08);
+}
+
+.cu-blk1,.cu-blk2,.cu-blk3 {
+    border-bottom: 1px solid #E6E6E6;
+    width: 80%;
+    margin: 0.5em 0em;
+    padding: 0.5em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--Gray-Scale-Gray-800, #333);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 27.2px */
+}
+
+.cu-blk3{
+    border: none;
+}
+
+.cu-p1{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+}
+
+.cu-p2{
+    color: var(--Gray-Scale-Gray-500, #808080);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.cu-hd > aside {
+    border-radius: 8px;
+    background: var(--Gray-Scale-White, #FFF);
+    box-shadow: 0px 0px 56px 0px rgba(0, 38, 3, 0.08);
+    width: 68%;
+    padding: 2em 2em;
+}
+
+.form-div1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inp1, .inp2{
+    width: 25em;
+    height: 49px;
+    margin: 0.5em 0em;
+    padding: 14px 0px;
+    padding-left: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    
+}
+
+.inp3{
+    display: flex;
+    width: 100% ;
+    height: 49px;
+    margin: 0.5em 0em;
+    padding: 14px  0px;
+    padding-left: 16px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+}
+
+.inp4{
+    display: flex;
+    width: 100% ;
+    height: 98px;
+    margin: 0.5em 0em;
+    padding: 14px  0px;
+    padding-left: 16px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+}
+
+.cu-hd > aside > form >button{
+    border-radius: 43px;
+    background: var(--Branding-Success, #00B207);
+    display: inline-flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: var(--Gray-Scale-White, #FFF);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}

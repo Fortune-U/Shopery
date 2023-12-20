@@ -153,6 +153,7 @@ font-family: 'Poppins', sans-serif;
 }
 .nav-link{
     display: flex;
+    text-decoration: none;
     gap: 2em;
     list-style: none;
     font-size: 14px;
@@ -162,6 +163,8 @@ font-family: 'Poppins', sans-serif;
     color: #999999;
     cursor: pointer;
 }
+
+
 
 .third-layer-two{
     align-items: center;
