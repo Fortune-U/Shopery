@@ -63,3 +63,7 @@
     cursor: pointer;
 }
 
+.shopb-link-now{
+    text-decoration: none;
+    color: #00B207;
+  }

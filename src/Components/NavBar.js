@@ -33,7 +33,10 @@ export default function NavBar() {
                         </select>
                     </div>
                     <p>
-                        Sign In / Sign Up
+                        <Link className='signin' to="/signin">
+                            Sign In / Sign Up
+                        </Link>
+                        
                     </p>
                 </div>
            </div>

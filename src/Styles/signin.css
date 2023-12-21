@@ -1,0 +1,118 @@
+.signin-wrp{
+   
+}
+.signin-bd{
+    display: flex;
+    margin: 2em 20em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid var(--Gray-Scale-Gray-50, #F2F2F2);
+    background: var(--Gray-Scale-White, #FFF);
+    box-shadow: 0px 0px 56px 0px rgba(0, 38, 3, 0.08);
+}
+
+.signinhd{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 38.4px */
+}
+
+.s-inp1,.s-inp2{
+    display: flex;
+    padding: 14px 16px;
+    width: 30em;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    margin: 0.4em 0em;
+}
+
+.rmb-fgp-ctn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rmb-ctn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.rmb-me{
+    color: var(--Gray-Scale-Gray-600, #666);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.fgp-ctn{
+    color: var(--Gray-Scale-Gray-600, #666);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.s-btn-ctn{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em;
+}
+
+.sign-lgn{
+    width: 100%;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    gap: 12px;
+    border-radius: 43px;
+    background: var(--Branding-Success, #00B207);
+    color: var(--Gray-Scale-White, #FFF);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    
+}
+
+.dha{
+    color: var(--Gray-Scale-Gray-600, #666);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.rg{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+}
+
+.dha-rg-ctn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}

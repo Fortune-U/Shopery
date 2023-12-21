@@ -155,3 +155,7 @@ img{
     color: #33ff57; /* Customize active dot color */
   }
   
+  .shop-link-now{
+    text-decoration: none;
+    color: #FFF;
+  }

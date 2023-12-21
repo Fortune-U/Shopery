@@ -172,3 +172,9 @@ font-family: 'Poppins', sans-serif;
     cursor: pointer;
     padding-right: 1em;
 }
+
+.signin{
+    text-decoration: none;
+    color: var(--Gray-Scale-White, #999999);
+
+}

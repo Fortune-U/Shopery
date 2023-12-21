@@ -4,6 +4,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import headImg from '../Assets/fruit-bskt.png';
 import headImg2 from '../Assets/Image.png';
 import headImg3 from '../Assets/Image1.png';
+import { Outlet, Link } from "react-router-dom"
 
 function CustomDot({ index, isActive }) {
     // Define your custom dot rendering logic here
@@ -29,7 +30,7 @@ export default function Header() {
                     <span className='sales-txt'>Sale up to <p className='disc-txt'>30% OFF</p></span>
                     <p className='shipping-txt'>Free shipping on your order. we deliver, you enjoy</p>
                     <button className='shp-nw-btn'>
-                    <p>shop now</p>
+                    <p><Link className='shop-link-now' to="/shop">Shop Now</Link></p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
                         <path d="M16 7.50055H1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M9.9502 1.47552L16.0002 7.49953L9.9502 13.5245" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

@@ -9,6 +9,7 @@ import './App.css';
 import NavBar from "./Components/NavBar";
 import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
+import SignIn from "./Pages/SignIn";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="about" element={<About />} />
       <Route path="blog" element={<Blog />} />
       <Route path="contactus" element={<ContactUs />} />
+      <Route path="signin" element={<SignIn />} />
     </Route>
     </Routes>
     </BrowserRouter>
