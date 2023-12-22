@@ -1,0 +1,11 @@
+.rating-ctn{
+    border-bottom: 1px solid #E6E6E6;
+    padding: 1em 0em;
+}
+.rating-ctn > form > p {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ margin-left: 1em;
+ gap: 0.1em;
+}

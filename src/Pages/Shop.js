@@ -138,12 +138,8 @@ const toggleElement = (element) => {
         <p className="filter-disp">Filter{filter}</p>
         <div className="sort-wrapper">
         <div className="sort-by">
-          <p>Sort by:</p>
-          <select>
-            <option>Latest</option>
-            <option>Popular</option>
-            <option>Best Seller</option>
-          </select>
+          
+          
         </div>
         <div className="results"><p>{shopProducts.length}</p> Results Found</div>
         </div>
@@ -176,12 +172,12 @@ const toggleElement = (element) => {
                     
                     {isOpen.price && (
                     <div>
-                      <button>
+                      {/* <button>
                       <p>Price slider</p>
                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
                       <path d="M13 7L7 1L1 7" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      </button>
+                      </button> */}
                       
                       <PriceSlider/>
                     

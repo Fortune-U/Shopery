@@ -10,6 +10,7 @@ import NavBar from "./Components/NavBar";
 import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
 import SignIn from "./Pages/SignIn";
+import Cart from "./Pages/Cart";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="blog" element={<Blog />} />
       <Route path="contactus" element={<ContactUs />} />
       <Route path="signin" element={<SignIn />} />
+      <Route path="cart" element={<Cart />} />
     </Route>
     </Routes>
     </BrowserRouter>

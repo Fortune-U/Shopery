@@ -1,6 +1,7 @@
 import {useDispatch, useSelector } from "react-redux";
 import React, { useState,useEffect } from "react";
 import { stars } from "../features/rating";
+import '../Styles/ratingselector.css';
 
 export default function RatingSelector() {
     const dispatch = useDispatch();
@@ -64,7 +65,7 @@ export default function RatingSelector() {
     // }
       
     return(
-        <div>
+        <div className="rating-ctn">
             
                     <form>
                     <p>

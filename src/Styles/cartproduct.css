@@ -1,0 +1,68 @@
+.ct-wrp{
+    display: flex;
+    
+    align-items: center;
+    border-bottom: 1px solid #E6E6E6;;
+}
+
+.add-cart-btns{
+    width: 26%;
+}
+
+.ct-wrp > .img-txt {
+    width: 40%;
+    display: flex;
+    gap: 0.1em;
+    align-items: center;
+}
+
+.small-img{
+width: 30%;
+}
+
+.img-txt{
+    display: flex;
+}
+
+.prc{
+    width: 15%;
+}
+
+.add-cart-btns{
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    
+}
+
+.add-cart-btns > div{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    gap: 0.1em;
+    border-radius: 170px;
+    border: 1px solid var(--gray-scale-gray-100, #E6E6E6);
+    background: var(--gray-scale-white, #FFF);
+}
+
+.add-cart-btns > div > button{
+    border-radius: 170px;
+    background: var(--gray-scale-gray-50, #F2F2F2);
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sb-ttl{
+    width: 13%;
+}
+
+.rmv-prd-btn{
+    background-color: #FFF;
+    border: none;
+    margin-top: 2px;
+    cursor: pointer;
+}

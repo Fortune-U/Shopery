@@ -1,0 +1,222 @@
+.crt-title{
+    display: flex;
+    justify-content: center;
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    text-align: center;
+    margin-top: 1em;
+
+    /* Heading 05/Heading 05 — 600 */
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 38.4px */
+}
+.cart-bd{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 4em;
+    gap: 1em;
+    
+}
+
+.crt-mn{
+    width: 70%;
+}
+
+.top-cart{
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+}
+
+.crt-hd{
+    display: flex; 
+    border-bottom: 1px solid #E6E6E6;
+    padding: 1em 1em;
+    color: var(--Gray-Scale-Gray-500, #808080);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 14px */
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.crt-st-ctn{
+    height: 20em;
+    padding: 1em 1em;
+    border-bottom: 1px solid #E6E6E6;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.crt-actns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 1em;
+    
+}
+
+.crt-actns > button , .crt-actns > .rts-btn > button {
+    border-radius: 43px;
+    background: var(--Gray-Scale-Gray-50, #F2F2F2);
+    color: var(--Gray-Scale-Gray-700, #4D4D4D);
+    padding: 14px 32px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    border: none;
+    cursor: pointer;
+}
+
+.rts-btn {
+    border-radius: 43px;
+    background: var(--Gray-Scale-Gray-50, #F2F2F2);
+    color: var(--Gray-Scale-Gray-700, #4D4D4D);
+    font-family: Poppins;
+}
+
+
+
+.btm-crt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    margin-top: 2em;
+}
+
+.btm-crt >p{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+
+    /* Body XL/Body XL, 500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+}
+.btm-crt > form{
+    display: flex;
+}
+.btm-crt > form >input {
+    color: var(--Gray-Scale-Gray-400, #999);
+
+/* Body Medium/Body Medium, 400 */
+border-radius: 46px;
+border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+background: var(--Gray-Scale-White, #FFF);
+width: 20em;
+padding: 1em 0em;
+margin-right: -4em;
+}
+
+.btm-crt > form > button{
+    
+    border-radius: 43px;
+    background: var(--Gray-Scale-Gray-800, #333);
+    color: var(--Gray-Scale-White, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    padding: 12px 30px;
+    border: none;
+    
+}
+
+.crt-ttl{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+
+/* Body XL/Body XL, 500 */
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 30px */
+}
+
+.crt-light{
+    color: var(--Gray-Scale-Gray-700, #4D4D4D);
+
+    /* Body Small/Body Small, 400 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+.crt-bld{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+
+    /* Body Small/Body Small, 500 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+}
+
+.cart-bd > aside{
+ padding: 1em 1em;
+ border-radius: 8px;
+border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+background: var(--Gray-Scale-White, #FFF);
+height: 18em;
+}
+
+.cart-bd > aside > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0em;
+}
+
+.cart-bd > aside > button{
+    border-radius: 43px;
+background: var(--Branding-Success, #00B207);
+display: flex;
+width: 100%;
+padding: 16px 40px;
+justify-content: center;
+align-items: center;
+gap: 16px;
+color: var(--Gray-Scale-White, #FFF);
+border: none;
+/* Body Medium/Body Medium, 600 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 19.2px */
+cursor: pointer;
+margin-top: 4em;
+}
+
+.prd{
+    width: 38.5%;
+}
+
+.pric{
+width: 16.3%;
+
+}
+
+.qty{
+    width: 23%;
+
+}
+
+.sbt{
+    width: 15%;
+    
+}

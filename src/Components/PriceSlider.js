@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "@mui/material/Slider";
+import '../Styles/slider.css';
 import { useEffect,useState } from "react";
 import {  useDispatch,useSelector } from 'react-redux'
 import {  newPriceRange } from "../features/priceRange";
@@ -45,12 +46,12 @@ function PriceSlider() {
    
    
    return (
-      <div style = {{ width: "12rem", padding: "20px", color:'#52af77' }}>
-         <h3> Creating the range slider using the material UI in react JS </h3>
-         <Slider value = {slide} 
+      <div className="slider-ctn" >
+         <Slider className="slide" value = {slide} 
           onChange = {handleChanges} 
          valueLabelDisplay="auto" />
-         Price:  {slide[0]} - {slide[1]}
+         <span className="tt">Price:  <p>{slide[0]} - {slide[1]}</p></span>
+         
       </div>
    );
 }
