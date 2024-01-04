@@ -1,12 +1,17 @@
 import Footer from "../Components/Footer";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import '../Styles/signin.css'
+import '../Styles/signup.css'
 
-export default function SignIn() {
+
+export default function SignUp() {
   const [auth, setAuth] = useState({
+    firstName:"",
+    lastName:"",
     email:"",
+    profile_img:"test",
     password:"",
+    cpassword:"",
     //isRemembered:false,
   })
    
@@ -15,7 +20,7 @@ export default function SignIn() {
   function handleSubmit(event){
     event.preventDefault()
 
-    fetch('https://shopery.onrender.com/api/v1/auth/login', {
+    fetch('https://shopery.onrender.com/api/v1/user', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -31,10 +36,11 @@ export default function SignIn() {
         return response.json(); // Assuming the response is in JSON format
       })
       .then(response => {
-        if (response.message === "Success") {
-            navigate("/")
+        console.log(response)
+        if (response.message === "successfully registered") {
+            navigate("/signin")
            
-        }
+        } 
       })
       .catch(error => {
         // Handle errors
@@ -61,47 +67,71 @@ export default function SignIn() {
   }
 
     return(
-    <div className="signin-wrp">
-      <div className="signin-bd">
-            <p className="signinhd">Sign In</p>
+    <div className="signup-wrp">
+      <div className="signup-bd">
+            <p className="signuphd">Create Account</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" 
-                className="s-inp1" 
+                className="su-inp1" 
+                placeholder="First Name"  
+                name="firstName"
+                value={auth.firstName}
+                onChange={handleChange}
+                />
+
+                <input type="text" 
+                className="su-inp2" 
+                placeholder="Last Name"  
+                name="lastName"
+                value={auth.lastName}
+                onChange={handleChange}
+                />
+
+                <input type="text" 
+                className="su-inp3" 
                 placeholder="Email"  
                 name="email"
                 value={auth.email}
                 onChange={handleChange}
+                required
                 />
 
                 <input type="password" 
-                className="s-inp2" 
+                className="su-inp4" 
                 placeholder="Password" 
                 name="password" 
                 value={auth.password}
                 onChange={handleChange}  />
+
+                <input type="password" 
+                className="su-inp5" 
+                placeholder="Confirm Password" 
+                name="cpassword" 
+                value={auth.cpassword}
+                onChange={handleChange}  
+                
+                />
                 
                 <div className="rmb-fgp-ctn">
                     <div className="rmb-ctn">
                     <input type="checkbox" 
-                    name="isRemembered" 
-                    id="rememberme"
-                    checked={auth.isRemembered}
+                    name="isAccepted" 
+                    id="acc-trms"
+                    checked={auth.isAccepted}
                     />
-                    <label for ="checkbox" className="rmb-me">Remeber me</label>
+                    <label for ="checkbox" className="rmb-me">Accept all terms & Conditions</label>
                     </div>
                     
-                    <div className="fgp-ctn">
-                        Forgot Password
-                    </div>
+                   
                 </div>
 
 
                 <div className="s-btn-ctn">
-                <button className="sign-lgn">Login</button>
+                <button className="sign-lgn">Create Account</button>
                 </div>
                 
                 <div className="dha-rg-ctn">
-                <p className="dha" >Don't have account? <Link to="/signup" className="rg">Register</Link></p>
+                <p className="dha" >Already have an account?<Link to="/signin" className="rg" > Login</Link></p>
                 </div>
                 
                 

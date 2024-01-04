@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import greyBag from '../Assets/addBag.png'
-import greenBag from '../Assets/Add To Cart.png'
-import wishListGrey from '../Assets/Add To wishlist.png'
-import wishListRed from '../Assets/Add To wishlist red.png'
-import quickView from '../Assets/Quick View.png'
+import { useState, useEffect } from 'react';
+import greyBag from '../Assets/addBag.png';
+import greenBag from '../Assets/Add To Cart.png';
+import wishListGrey from '../Assets/Add To wishlist.png';
+import wishListRed from '../Assets/Add To wishlist red.png';
+import quickView from '../Assets/Quick View.png';
 //import ProductQuickView from './ProductQuickView'
-import ProdQuickview from './ProdQuickview'
+import ProdQuickview from './ProdQuickview';
 import Popup from 'reactjs-popup';
 //import Warper from './Warper';
 import 'reactjs-popup/dist/index.css';
 // import apple from '../Assets/apple.png'
-import '../Styles/fruitcard.css'
+import '../Styles/fruitcard.css';
 
 export default function FruitCard(props) {
  // add to bag
@@ -23,10 +23,134 @@ export default function FruitCard(props) {
         boxShadow: add.isAdded? '0px 0px 12px 0px rgba(32, 181, 38, 0.32)' : 'none'
     }
 
+    //add to cart
+    const [view,setViewed] = useState({
+      isClicked : false
+})
+
+    console.log(add.isAdded)
+
+  //   function toggleAddtoCart() {
+  //     let cartFunc = add.isAdded? 
+ 
+  //     fetch('https://shopery.onrender.com/api/v1/add', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(props.card.id)
+  // })
+  
+  // .then(response => {
+  //   if (!response.ok) {
+  //     throw new Error(`HTTP error! Status: ${response.status}`);
+  //   }
+  //   return response.json(); // Assuming the response is in JSON format
+  // })
+  // .catch(error => {
+  //   // Handle errors
+  //   console.error('Error:', error);
+    
+  // })
+  //      : fetch('https://shopery.onrender.com/api/v1/remove', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Accept': 'application/json',
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(props.card.id)
+  //     })
+      
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       return response.json(); // Assuming the response is in JSON format
+  //     })
+  //     .catch(error => {
+  //       // Handle errors
+  //       console.error('Error:', error);
+  
+  //     })
+  //   }
+
+    function toggleQuickView() {
+      
+      setViewed(prevView=>({
+        ...prevView,
+        isClicked : !prevView.isClicked,
+       views : view.isClicked? 
+       "" :
+       fetch(`https://shopery.onrender.com/api/v1/product/${props.card.productName}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setViewed(data);
+        
+      })
+      .catch((error) => {
+        console.error('API Error:', error);
+      })
+
+      }))
+    }
+
+    
+
+   
+
     function toggleAdd(){
         setAdded(prevAdd=>({
           ...prevAdd,
-          isAdded : !prevAdd.isAdded
+          isAdded : !prevAdd.isAdded,
+           cartFunc : add.isAdded? 
+ 
+      fetch('https://shopery.onrender.com/api/v1/remove', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(props.card.id)
+  })
+  
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json(); // Assuming the response is in JSON format
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('Error:', error);
+    
+  })
+       : fetch('https://shopery.onrender.com/api/v1/add', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(props.card.id)
+      })
+      
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json(); // Assuming the response is in JSON format
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+  
+      })
+
         }))
     }
 // hover effect for quick actions 
@@ -138,8 +262,11 @@ switch (rating) {
 }
 
  //pop controls
- const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false)
+
+
+console.log(view)
 
   
     return(
@@ -149,10 +276,13 @@ switch (rating) {
                     <img src={props.card.productThumbnail} alt="" />
                     <div className='quick-actions' style={quickViewStyle} >
                         <img src={WishlistIcon} alt='' onClick={toggleAddToWishlist} />
-                        <img src={quickView} alt='' onClick={() => setOpen(o => !o)} />
+                        <img src={quickView} alt='' onClick={() => {setOpen(o => !o); toggleQuickView();}} />
                         <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
                         
-                        <ProdQuickview />
+                        <ProdQuickview 
+                        prod={view}
+                        
+                        />
                         </Popup>
                     </div>
                 </div>
@@ -165,7 +295,7 @@ switch (rating) {
                     </div>
                
                 <div>
-                    <img src={addIcon} alt="" onClick={toggleAdd}/>
+                    <img src={addIcon} alt="" onClick={toggleAdd}  />
                 </div>
                 </div>
             </div>

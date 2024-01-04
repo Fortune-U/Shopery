@@ -1,9 +1,39 @@
 import Footer from "../Components/Footer";
 import { Outlet, Link } from "react-router-dom"
 import CartProduct from "../Components/CartProduct";
+import React, { useState, useEffect } from "react";
 import '../Styles/cart.css'
 
 export default function Cart() {
+    const [getCart, setGetcart] = useState([]);
+
+
+    useEffect(() =>{
+        fetch('https://shopery.onrender.com/api/v1/cart')
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setGetcart(data);
+        })
+        .catch((error) => {
+          console.error('API Error:', error);
+        });
+    },[getCart]);
+
+    
+
+    const cart = getCart.map(card=>{
+        return(
+        <CartProduct  
+        key={card.id}
+        card={card}
+        />
+        )
+    });
     return(
         <div className="cart-wrapper">
 
@@ -23,7 +53,7 @@ export default function Cart() {
                             <p className="sbt">SubTotal</p>
                         </div>
                             <div className="crt-st-ctn">
-                            <CartProduct />
+                            {cart}
                             </div>
                         <div className="crt-actns">
                             <Link to='/shop' className="rts-btn"><button>Return to shop</button></Link>

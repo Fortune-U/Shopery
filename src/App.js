@@ -11,6 +11,8 @@ import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
 import SignIn from "./Pages/SignIn";
 import Cart from "./Pages/Cart";
+import SignUp from "./Pages/SignUp";
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
       <Route path="blog" element={<Blog />} />
       <Route path="contactus" element={<ContactUs />} />
       <Route path="signin" element={<SignIn />} />
+      <Route path="signup" element={<SignUp />} />
       <Route path="cart" element={<Cart />} />
     </Route>
     </Routes>
