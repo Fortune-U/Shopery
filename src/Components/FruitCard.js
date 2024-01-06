@@ -28,7 +28,7 @@ export default function FruitCard(props) {
       isClicked : false
 })
 
-    console.log(add.isAdded)
+    
 
   //   function toggleAddtoCart() {
   //     let cartFunc = add.isAdded? 
@@ -110,13 +110,15 @@ export default function FruitCard(props) {
           isAdded : !prevAdd.isAdded,
            cartFunc : add.isAdded? 
  
-      fetch('https://shopery.onrender.com/api/v1/remove', {
+      fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(props.card.id)
+    body: JSON.stringify({
+      quantity:1
+    })
   })
   
   .then(response => {
@@ -130,13 +132,15 @@ export default function FruitCard(props) {
     console.error('Error:', error);
     
   })
-       : fetch('https://shopery.onrender.com/api/v1/add', {
+       : fetch(`https://shopery.onrender.com/api/v1/cart/add/${props.card.id}`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(props.card.id)
+        body: JSON.stringify({
+          quantity:1
+        })
       })
       
       .then(response => {
@@ -266,7 +270,7 @@ switch (rating) {
   const closeModal = () => setOpen(false)
 
 
-console.log(view)
+
 
   
     return(

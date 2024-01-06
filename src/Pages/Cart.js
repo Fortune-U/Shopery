@@ -24,7 +24,7 @@ export default function Cart() {
         });
     },[getCart]);
 
-    
+    console.log(getCart)
 
     const cart = getCart.map(card=>{
         return(
