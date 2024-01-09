@@ -12,6 +12,8 @@ import ContactUs from "./Pages/ContactUs";
 import SignIn from "./Pages/SignIn";
 import Cart from "./Pages/Cart";
 import SignUp from "./Pages/SignUp";
+import CheckOut from "./Components/CheckOut";
+import Faqs from "./Pages/Faqs";
 
 
 
@@ -29,6 +31,8 @@ function App() {
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="checkout" element={<CheckOut />} />
+      <Route path="faq" element={<Faqs />} />
     </Route>
     </Routes>
     </BrowserRouter>

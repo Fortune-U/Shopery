@@ -1,4 +1,6 @@
-import '../Styles/footer.css'
+import '../Styles/footer.css';
+import { Outlet, Link } from "react-router-dom";
+
 export default function Footer() {
     return(
         <div className="footer-wrapper">
@@ -49,7 +51,7 @@ export default function Footer() {
                     <ul>
                     <h3>Helps</h3>
                         <li>Contact</li>
-                        <li>Faqs</li>
+                        <li><Link to="/faq" > Faqs </Link></li>
                         <li>Terms & Conditions</li>
                         <li>Privacy policy</li>
                     </ul>
