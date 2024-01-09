@@ -21,10 +21,6 @@ export default function Faqs () {
 
             <div>
 
-           
-
-            
-                
                     <div className="card-wrp">
                         <div className="card">
                             <div className="card-body">
