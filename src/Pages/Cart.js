@@ -1,5 +1,5 @@
 import Footer from "../Components/Footer";
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link, useNavigate } from "react-router-dom"
 import CartProduct from "../Components/CartProduct";
 import React, { useState, useEffect } from "react";
 import '../Styles/cart.css'
@@ -7,6 +7,7 @@ import '../Styles/cart.css'
 export default function Cart() {
     const [getCart, setGetcart] = useState([]);
 
+    const navigate = useNavigate();
 
     useEffect(() =>{
         fetch('https://shopery.onrender.com/api/v1/cart')
@@ -34,6 +35,10 @@ export default function Cart() {
         />
         )
     });
+
+    function handleNavigate() {
+        navigate("/checkout")
+    }
     return(
         <div className="cart-wrapper">
 
@@ -82,7 +87,7 @@ export default function Cart() {
                         <p className="crt-light">Total:</p>
                         <p className="crt-bld">$84.00</p>
                     </div>
-                    <button className="ptd">Procced to Checkout</button>
+                    <button className="ptd" onClick={handleNavigate}>Procced to Checkout</button>
                 </aside>
           </div>
  

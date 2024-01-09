@@ -112,6 +112,7 @@ export default function FruitCard(props) {
  
       fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.id}`, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -134,6 +135,7 @@ export default function FruitCard(props) {
   })
        : fetch(`https://shopery.onrender.com/api/v1/cart/add/${props.card.id}`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
