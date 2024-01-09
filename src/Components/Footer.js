@@ -41,7 +41,7 @@ export default function Footer() {
                     <h3>My Account</h3>
                         <li>My Account</li>
                         <li>Order History</li>
-                        <li>Shopping Cart</li>
+                        <li><Link to="/cart">Shopping Cart</Link></li>
                         <li>Wishlist</li>
                         <li>Settings</li>
                     </ul>
@@ -50,7 +50,7 @@ export default function Footer() {
                 
                     <ul>
                     <h3>Helps</h3>
-                        <li>Contact</li>
+                        <li><Link to="/contactus">Contact</Link></li>
                         <li><Link to="/faq" > Faqs </Link></li>
                         <li>Terms & Conditions</li>
                         <li>Privacy policy</li>
@@ -60,8 +60,8 @@ export default function Footer() {
                 
                     <ul>
                     <h3>Proxy</h3>
-                        <li>About</li>
-                        <li>Shop</li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/shop">Shop</Link></li>
                         <li>Product</li>
                         <li>Product Details</li>
                         <li>Track Order</li>
