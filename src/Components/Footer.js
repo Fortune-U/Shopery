@@ -39,7 +39,7 @@ export default function Footer() {
                     
                     <ul>
                     <h3>My Account</h3>
-                        <li>My Account</li>
+                        <li><Link to="/account">My Account</Link></li>
                         <li>Order History</li>
                         <li><Link to="/cart">Shopping Cart</Link></li>
                         <li>Wishlist</li>

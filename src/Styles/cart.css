@@ -12,6 +12,18 @@
     font-weight: 600;
     line-height: 120%; /* 38.4px */
 }
+.crt-title-c{
+    display: flex;
+    justify-content: center;
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 38.4px */
+}
 .cart-bd{
     display: flex;
     justify-content: space-between;
@@ -19,9 +31,17 @@
     gap: 1em;
     
 }
-
+.cart-bdc{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
 .crt-mn{
     width: 70%;
+}
+
+.crt-mnc{
+    width: 100%;
 }
 
 .top-cart{
@@ -83,7 +103,7 @@
 
 
 
-.btm-crt{
+.btm-crt ,.btm-crtc {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,19 +124,44 @@
     font-weight: 500;
     line-height: 150%; /* 30px */
 }
-.btm-crt > form{
+.btm-crt > form {
+    display: flex;
+}
+
+.btm-crtc > form {
     display: flex;
 }
 .btm-crt > form >input {
     color: var(--Gray-Scale-Gray-400, #999);
+    border-radius: 46px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    width: 20em;
+    padding: 1em 0em;
+    margin-right: -4em;
+}
 
-/* Body Medium/Body Medium, 400 */
-border-radius: 46px;
-border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
-background: var(--Gray-Scale-White, #FFF);
-width: 20em;
-padding: 1em 0em;
-margin-right: -4em;
+.btm-crtc > form > input{
+    color: var(--Gray-Scale-Gray-400, #999);
+    border-radius: 46px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    width: 10em;
+    padding: 1em 0em;
+    margin-right: -4em;
+}
+
+.btm-crtc > form > button {
+    border-radius: 43px;
+    background: var(--Gray-Scale-Gray-800, #333);
+    color: var(--Gray-Scale-White, #FFF);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    padding: 8px 30px;
+    border: none;
 }
 
 .btm-crt > form > button{
@@ -168,11 +213,26 @@ line-height: 150%; /* 30px */
 }
 
 .cart-bd > aside{
- padding: 1em 1em;
- border-radius: 8px;
-border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
-background: var(--Gray-Scale-White, #FFF);
-height: 18em;
+    padding: 1em 1em;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    height: 18em;
+}
+
+.cart-bdc > aside{
+    padding: 1em 1em;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    height: 18em;
+    width: 35%;
+}
+
+.cart-bdc > aside > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0em;
 }
 
 .cart-bd > aside > div {
@@ -181,6 +241,26 @@ height: 18em;
     margin: 0.5em 0em;
 }
 
+.cart-bdc > aside > button {
+    border-radius: 43px;
+    background: var(--Branding-Success, #00B207);
+    display: flex;
+    width: 100%;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: var(--Gray-Scale-White, #FFF);
+    border: none;
+    /* Body Medium/Body Medium, 600 */
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+    cursor: pointer;
+    margin-top: 4em;
+}
 .cart-bd > aside > button{
     border-radius: 43px;
     background: var(--Branding-Success, #00B207);

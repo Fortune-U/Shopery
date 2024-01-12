@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart";
 import SignUp from "./Pages/SignUp";
 import CheckOut from "./Components/CheckOut";
 import Faqs from "./Pages/Faqs";
+import Account from "./Pages/Account";
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<CheckOut />} />
       <Route path="faq" element={<Faqs />} />
+      <Route path="account" element={<Account />} />
     </Route>
     </Routes>
     </BrowserRouter>

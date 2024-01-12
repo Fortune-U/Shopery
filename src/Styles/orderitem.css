@@ -1,0 +1,54 @@
+.ot-wrp{
+    display: flex;
+    margin: 1em 1em;
+}
+
+.ot1{
+    color: var(--Gray-Scale-Gray-800, #333);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    width: 14%;
+}
+
+.ot2{
+    color: var(--Gray-Scale-Gray-800, #333);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    width: 21%;
+}
+
+.ot3{
+    color: var(--Gray-Scale-Gray-800, #333);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    width: 31%;
+}
+
+.ot4{
+    color: var(--Gray-Scale-Gray-800, #333);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    width: 20%;
+}
+
+.ot5{
+    color: var(--Branding-Success, #00B207);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    cursor: pointer;
+}
