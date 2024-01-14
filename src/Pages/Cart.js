@@ -5,12 +5,16 @@ import React, { useState, useEffect } from "react";
 import '../Styles/cart.css'
 
 export default function Cart() {
-    const [getCart, setGetcart] = useState([]);
+    const [getCart, setGetCart] = useState({ cart:[]});
+    let cartItems = getCart.cart;
 
     const navigate = useNavigate();
 
     useEffect(() =>{
-        fetch('https://shopery.onrender.com/api/v1/cart')
+        fetch('https://shopery.onrender.com/api/v1/cart',{
+            method: 'GET',
+            credentials: 'include',
+            })
         .then((res) => {
           if (!res.ok) {
             throw new Error('Network response was not ok');
@@ -18,16 +22,21 @@ export default function Cart() {
           return res.json();
         })
         .then((data) => {
-          setGetcart(data);
+          setGetCart(data);
+          
         })
+
+
         .catch((error) => {
           console.error('API Error:', error);
         });
     },[getCart]);
 
-    console.log(getCart)
+    
+    
+    
 
-    const cart = getCart.map(card=>{
+    const cart = cartItems.map(card=>{
         return(
         <CartProduct  
         key={card.id}
