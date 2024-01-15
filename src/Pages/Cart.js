@@ -30,10 +30,11 @@ export default function Cart() {
         .catch((error) => {
           console.error('API Error:', error);
         });
-    },[getCart]);
+    },[]);
 
     
-    
+   
+    let Shipping = 5;
     
 
     const cart = cartItems.map(card=>{
@@ -86,7 +87,7 @@ export default function Cart() {
                     <p className="crt-ttl">Cart Total</p>
                     <div>
                         <p className="crt-light">Subtotal:</p>
-                        <p className="crt-bld">$84.00</p>
+                        <p className="crt-bld">${getCart.total}</p>
                     </div>
                     <div>
                         <p className="crt-light">Shipping:</p>
@@ -94,7 +95,7 @@ export default function Cart() {
                     </div>
                     <div>
                         <p className="crt-light">Total:</p>
-                        <p className="crt-bld">$84.00</p>
+                        <p className="crt-bld">$ {getCart.total + Shipping}</p>
                     </div>
                     <button className="ptd" onClick={handleNavigate}>Procced to Checkout</button>
                 </aside>
