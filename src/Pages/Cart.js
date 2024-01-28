@@ -37,7 +37,9 @@ export default function Cart() {
     let Shipping = 5;
     
 
-    const cart = cartItems.map(card=>{
+    const cart = cartItems
+    .filter(card => card.qty > 0)
+    .map(card=>{
         return(
         <CartProduct  
         key={card.id}
@@ -72,7 +74,7 @@ export default function Cart() {
                             </div>
                         <div className="crt-actns">
                             <Link to='/shop' className="rts-btn"><button>Return to shop</button></Link>
-                            <button>Update cart</button>
+                            <button onClick={()=>{window.location.reload()}}>Update cart</button>
                         </div>
                     </div>
                     <div className="btm-crt">

@@ -22,6 +22,7 @@ export default function SignUp() {
 
     fetch('https://shopery.onrender.com/api/v1/user', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
