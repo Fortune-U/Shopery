@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+.icons > img{
+    width: 20px;
+}
+
 .nav-dsh-ctn{
     display: flex;
 }

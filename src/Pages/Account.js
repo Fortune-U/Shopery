@@ -10,23 +10,15 @@ import Dashboard from "../Components/Dashboard";
 import OrderHistory from "./OrderHistory";
 import CartComponent from "../Components/CartComponent"
 import { useState } from "react";
+import AccSettings from "../Components/AccSettings";
 
 
 export default function Account () {
-    const [isNaved, setIsNaved] = useState({
-        dashboard: true,
-        orderhistory: false,
-        wishlist: false,
-        shoppingcart:false,
-        setting:false,
-        logout:false
-      });
+    const [activeElement, setActiveElement] = useState("dashboard");
 
     const toggleElement = (element) => {
-        setIsNaved((prevState) => ({
-          [element] : !prevState[element],
-        }));
-      }
+        setActiveElement(element);
+    };
     return(
         <div className="Act-wrp">
   
@@ -59,18 +51,10 @@ export default function Account () {
             </aside>
 
             < main>
-            {isNaved.dashboard && (
-                <Dashboard />
-            )}
-
-            {isNaved.orderhistory && (
-                <OrderHistory />
-            )}
-
-            {isNaved.shoppingcart && (
-                <CartComponent />
-            )}
-             
+            {activeElement === "dashboard" && <Dashboard />}
+            {activeElement === "orderhistory" && <OrderHistory />}
+            {activeElement === "shoppingcart" && <CartComponent />}
+            {activeElement === "settings" && <AccSettings />} 
             </main>
 
         </div>

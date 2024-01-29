@@ -1,0 +1,174 @@
+
+
+.acc-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*  */
+    border-radius: 8px 8px 0px 0px;
+    padding: 16px 0px 16px 24px;
+    
+}
+
+.acc-top > main > form > input {
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    width: 36em;
+    height: 49px;
+    padding: 14px 0px 14px 16px;
+    margin: 0.5em 0em;
+    outline: none;
+}
+
+.acc-top > main > form > label{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+
+/* Body Small/Body Small, 400 */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+}
+
+.acc-top > main > form > button{
+    border-radius: 43px;
+    background: var(--Branding-Success, #00B207);
+    color: var(--Gray-Scale-White, #FFF);
+    padding: 1em 1em;
+    /* Body Small/Body Small, 600 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    border: none;
+    margin-top: 1em;
+    cursor:pointer;
+}
+
+.edit-prof-ctn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.act-set{
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+    display: block;
+    /* Body XL/Body XL, 500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    padding: 1em 1em;
+    border-bottom: 1px solid #E6E6E6;
+    
+}
+
+.ctn-tt{
+    box-shadow: 0px 1px 0px 0px #E5E5E5;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+}
+
+.acc-mid{
+    box-shadow: 0px 1px 0px 0px #E5E5E5;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    padding: 1em 1em;
+    margin: 1em 0em;
+}
+
+.chs-image{
+    border-radius: 43px;
+    border: 2px solid var(--Branding-Success, #00B207);
+    background: var(--Gray-Scale-White, #FFF);
+    color: var(--Branding-Success, #00B207);
+
+    /* Body Small/Body Small, 600 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    padding: 1em 1em;
+    cursor:pointer;
+}
+
+.acc-btm{
+    box-shadow: 0px 1px 0px 0px #E5E5E5;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    padding: 1em 1em;
+    
+}
+
+.acc-btm > p {
+    color: var(--Gray-Scale-Gray-900, #1A1A1A);
+
+    /* Body XL/Body XL, 500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    border-bottom: 1px solid #E6E6E6;
+    padding: 0.5em 0em;
+    margin-bottom: 0.5em;
+}
+
+.acc-btm > form > input{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    display: flex;
+    padding: 14px 16px;
+    align-items: center; 
+    outline: none;
+}
+
+.pass-shi{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1em 0em;
+}
+.pass-shi > div {
+    width: 49%;
+    
+}
+
+.pass-shi > div > input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
+    background: var(--Gray-Scale-White, #FFF);
+    display: flex;
+    padding: 14px 16px;
+    align-items: center;
+    outline: none;
+}
+
+.change-pass{
+    border-radius: 43px;
+background: var(--Branding-Success, #00B207);
+color: var(--Gray-Scale-White, #FFF);
+
+/* Body Small/Body Small, 600 */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 16.8px */
+padding: 1em 1em;
+border: none;
+cursor: pointer;
+}
