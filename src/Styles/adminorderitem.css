@@ -1,0 +1,25 @@
+.ad-ot-wrp {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 1em ;
+    border-radius: 16px;
+    background-color:  #FF8A00;
+    margin-top: 0.5em;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.ad-ot-bt{
+    background: none;
+    border: none;
+    outline: none;
+}
+.nw-od{
+    font-weight: 500;
+}
+
+.view-a{
+    color: #00B207;
+    text-decoration: underline;
+    cursor: pointer;
+}

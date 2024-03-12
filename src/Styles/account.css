@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.act-bd > main {
+.act-bd > .acc-main {
     margin: 1em 0em;
     width: 65%;
     

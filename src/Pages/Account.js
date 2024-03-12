@@ -19,6 +19,30 @@ export default function Account () {
     const toggleElement = (element) => {
         setActiveElement(element);
     };
+
+    function logout(){
+        fetch('https://shopery.onrender.com/api/v1/auth/logout', {
+        method: 'POST',
+        credentials: 'include',
+        // headers: {
+        //   'Accept': 'application/json',
+        //   'Content-Type': 'application/json',
+        // },
+      })
+      
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json(); // Assuming the response is in JSON format
+      })
+
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+  
+      })
+    }
     return(
         <div className="Act-wrp">
   
@@ -44,13 +68,13 @@ export default function Account () {
                     <p onClick={()=>toggleElement("wishlist")}>Wishlist</p>
                     <p onClick={()=>toggleElement("shoppingcart")}>Shopping Cart</p>
                     <p onClick={()=>toggleElement("settings")}>Settings</p>
-                    <p onClick={()=>toggleElement("logout")}>Log-out</p>
+                    <p onClick={logout}>Log-out</p>
                     </div>
                 </div>
                 
             </aside>
 
-            < main>
+            < main className="acc-main">
             {activeElement === "dashboard" && <Dashboard />}
             {activeElement === "orderhistory" && <OrderHistory />}
             {activeElement === "shoppingcart" && <CartComponent />}

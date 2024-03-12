@@ -1,0 +1,70 @@
+
+
+.ad-dash-tp1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad-dash-tp1 > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: #00B207 ;
+    border-radius: 16px;
+    color: #fafafa;
+    height: 100px;
+    width: 300px;
+    padding: 1em 1em;
+    margin: 1em 1em;
+}
+.ad-dash-tp1 > div > main {
+    
+    width: 150px;
+}
+
+.ad-dash-tp1 > div > aside {
+    text-align: right;
+}
+
+.ad-dash-tp1 > div > aside > img {
+    width: 60px;
+}
+
+
+
+.ad-dash-tp1 > div > main > .title {
+    font-size: 12px;
+}
+
+.chart-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+}
+
+.chart-title > p {
+    font-size: 18px;
+    font-family: 600;
+}
+
+.time-frame {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em ;
+}
+
+.time-frame > p {
+    font-size: 12px;
+}
+
+.adl-tp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-dash-low {
+     
+     margin: 1em 0em;
+     padding: 1em 1em;
+}

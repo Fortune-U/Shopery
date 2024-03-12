@@ -1,0 +1,50 @@
+.adw-wrp{
+    background-color: #366;
+}
+.ad-bd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.ad-dsh-ctn{
+    display: flex;
+    padding: 2em 2em;
+    justify-content: flex-start;
+    /* width: 50%; */
+    
+    
+    
+}
+
+.ad-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    cursor: pointer;
+}
+
+.ad-lst-navs{
+    display: flex;
+    flex-direction: column;
+    gap: 2.05em;
+    margin-left: 1em;
+    cursor: pointer;
+    
+}
+
+/* .ad-lst-navs > p , .ad-icons > img {
+    background-color: #00B207 ;
+} */
+
+.admin-main{
+    /* width: 100%;*/
+    width: 80%;
+} 
+
+.add-tt {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 1em 1em;
+}

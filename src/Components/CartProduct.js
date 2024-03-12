@@ -5,11 +5,11 @@ import { useState } from 'react';
 export default function CartProduct(props) {
 
     const [counter, setCounter] = useState(props.card.qty);
-    const [subTotal, setSubTotal] = useState(props.card.subtotal);
+    //const [subTotal, setSubTotal] = useState(props.card.subtotal);
     // const [cartChange, setCartChange] = useState();
 
    
-
+   console.log(counter * props.card.price);
     
     
     const handleClick1 = () => {
@@ -78,42 +78,43 @@ export default function CartProduct(props) {
   
     });
     
+    
     };
     
 
 
-    function remove () {
-      fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.productId}`, {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          quantity:props.card.qty
-        })
-      })
+    // function remove () {
+    //   fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.productId}`, {
+    //     method: 'POST',
+    //     credentials: 'include',
+    //     headers: {
+    //       'Accept': 'application/json',
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       quantity:props.card.qty
+    //     })
+    //   })
       
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json(); // Assuming the response is in JSON format
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error(`HTTP error! Status: ${response.status}`);
+    //     }
+    //     return response.json(); // Assuming the response is in JSON format
         
-      })
-      // .then(response => {
-      //   setCartChange(response);
-      //   window.location.reload();
-      // })
+    //   })
+    //   // .then(response => {
+    //   //   setCartChange(response);
+    //   //   window.location.reload();
+    //   // })
       
-      .catch(error => {
-        // Handle errors
-        console.error('Error:', error);
+    //   .catch(error => {
+    //     // Handle errors
+    //     console.error('Error:', error);
   
-    });
-    window.location.reload();
-    };
+    // });
+  
+    // };
     
 
 
@@ -141,10 +142,11 @@ export default function CartProduct(props) {
                             <button onClick={handleClick1}>+</button>
                             </div>
             </div>
-            <p className='sb-ttl'>${subTotal}</p>
-            <button onClick={remove} className='rmv-prd-btn'><img src={close} alt='' /></button>
+            <p className='sb-ttl'>${counter * props.card.price}</p>
+            <button onClick={()=>{console.log("clicked")}} className='rmv-prd-btn'><img src={close} alt='' /></button>
 
 
         </div>
     );
 }
+

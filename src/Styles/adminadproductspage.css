@@ -1,0 +1,55 @@
+.aap-ctn{
+    padding: 1em 1em;
+}
+.prd-tp-sect{
+ display: flex ;
+ justify-content: space-between ;
+ align-items: center;
+ margin-bottom: 1em;
+}
+
+.prd-tp-mid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prd-tp-mid > p{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.prd-tp-sect-2{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.prd-tp-sect-2 > input {
+    width: 250px;
+    height: 40px;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding: 1em 1em;
+    outline: none;
+}
+
+.filt-nav{
+    display: flex;
+    gap: 0.6em;
+}
+
+.aap-bd{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.ad-apd{
+    border: 1px solid  #00B207;
+    background-color: #00B207;
+    color: #ffffff;
+    padding: 1em 2em;
+    border-radius: 16px;
+    cursor: pointer;
+}

@@ -4,13 +4,23 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import '../Styles/sidecart.css';
 import SideCart from './SideCart';
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link , useLocation } from "react-router-dom"
+
+// All the routes you want to exclude
+const hideNavbarRoutes = ["/admin"];
 
 export default function NavBar() {
+    const {pathname} = useLocation();
     const [open, setOpen] = useState(false);
-    const closeModal = () => setOpen(false)
+    const closeModal = () => setOpen(false);
+    const hideNavbar = hideNavbarRoutes.includes(pathname);
+    //if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
+    
+
     return(
+       
         <div className="navbar">
+            {!hideNavbar && (
            <div className="first-layer">
                 <div className="first-layer-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
@@ -41,7 +51,8 @@ export default function NavBar() {
                     </p>
                 </div>
            </div>
-
+)}
+    {!hideNavbar && (
             <div className="second-layer">
                 <div className="second-layer-one">
 
@@ -138,6 +149,8 @@ export default function NavBar() {
                     </div>
                 </div>
             </div>
+            )}
+            {!hideNavbar && (
             <div className="third-layer">
                 <div className="third-layer-one">
                     <ul className='nav-link'>
@@ -158,9 +171,10 @@ export default function NavBar() {
                     <p>(219) 555-0114</p>
                 </div>
             </div>
-
+)}
             <Outlet />
         </div>
         
+       
     );
 }

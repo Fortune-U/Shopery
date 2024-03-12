@@ -1,0 +1,59 @@
+
+.addnewprd-tp{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.addnewprd-tp > p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.addnewprd-bd{
+    display: flex;
+    justify-content: space-between;
+}
+.addnewprd-bd > aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.addnewprd-bd > aside > input {
+    width: 350px;
+    height: 40px;
+    border-radius: 16px;
+    border: 1px solid #020202;
+    padding: 1em 1em;
+    outline: none;
+    
+}
+
+.addnewprd-bd > main > img {
+    cursor: pointer;
+}
+
+.add-img2 {
+    width: 100px;
+    box-shadow: #020202;
+}
+
+.del , .sav {
+    padding: 1em 2em;
+    border-radius: 16px;
+    margin: 0em 0.2em;
+    outline: none;
+    cursor: pointer;
+}
+
+.del {
+    border: 1px solid #EA4B48;
+    background-color: #ffffff;
+    color: #EA4B48;
+}
+
+.sav {
+    border: 1px solid  #00B207;
+    background-color: #00B207;
+    color: #ffffff;
+}

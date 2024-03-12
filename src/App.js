@@ -15,6 +15,7 @@ import SignUp from "./Pages/SignUp";
 import CheckOut from "./Components/CheckOut";
 import Faqs from "./Pages/Faqs";
 import Account from "./Pages/Account";
+import Admindashboard from "./Pages/Admin/Admindashboard";
 
 
 
@@ -35,6 +36,7 @@ function App() {
       <Route path="checkout" element={<CheckOut />} />
       <Route path="faq" element={<Faqs />} />
       <Route path="account" element={<Account />} />
+      <Route path="admin" element={<Admindashboard />} />
     </Route>
     </Routes>
     </BrowserRouter>

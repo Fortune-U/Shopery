@@ -1,0 +1,31 @@
+.adprodctn {
+    width: 300px;
+    cursor: pointer;
+
+}
+
+.adprctn-img {
+    max-width: 300px;
+}
+
+.edit-png{
+    display: none;
+    width: 300px;
+    margin-top: -100%;
+}
+
+.adpr-sec {
+display: flex;
+justify-content: space-between;
+font-weight: 500;
+}
+.adprodctn > p {
+    font-size: 14px;
+    color: #202020;
+    margin-bottom: 1em;
+}
+
+.adpr-mid{
+    font-size: 12px;
+    margin: 0.2em 0.2em;
+}
