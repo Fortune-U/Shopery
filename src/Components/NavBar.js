@@ -5,6 +5,9 @@ import 'reactjs-popup/dist/index.css';
 import '../Styles/sidecart.css';
 import SideCart from './SideCart';
 import { Outlet, Link , useLocation } from "react-router-dom"
+import ChefAi from './ChefAi';
+
+
 
 // All the routes you want to exclude
 const hideNavbarRoutes = ["/admin"];
@@ -14,7 +17,14 @@ export default function NavBar() {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
     const hideNavbar = hideNavbarRoutes.includes(pathname);
+
+    // declaration fot he chef ai pop up
+    const [isOpen, setIsOpen] = useState(false);
     //if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
+     
+    // const  toggleAI = () => {
+    //    setIsOpen = true
+    // }
     
 
     return(
@@ -30,6 +40,8 @@ export default function NavBar() {
 
                     <p>Store location- 6 durusonmi-etti, phase 1</p>
                 </div>
+                <button onClick={()=>setIsOpen(true)}>Open AI</button>
+                <button onClick={()=>setIsOpen(false)}>Close AI</button>
                 <div className="first-layer-right">   
                     <div className="selections"> 
                         <select className="lang" >
@@ -171,8 +183,11 @@ export default function NavBar() {
                     <p>(219) 555-0114</p>
                 </div>
             </div>
-)}
+            
+)}         
+        {isOpen && (<ChefAi />) }
             <Outlet />
+            
         </div>
         
        
