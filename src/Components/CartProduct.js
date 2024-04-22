@@ -1,6 +1,6 @@
 import '../Styles/cartproduct.css';
 import close from '../Assets/Close.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function CartProduct(props) {
 
@@ -9,13 +9,15 @@ export default function CartProduct(props) {
     // const [cartChange, setCartChange] = useState();
 
    
-   console.log(counter * props.card.price);
+
     
+  
     
     const handleClick1 = () => {
         // Counter state is incremented
         // setSubTotal(cartChange.Cart.subtotal);
         setCounter(counter + 1);
+        
         
         fetch(`https://shopery.onrender.com/api/v1/cart/add/${props.card.productId}`, {
         method: 'POST',
@@ -51,6 +53,7 @@ export default function CartProduct(props) {
         // setSubTotal(cartChange.Cart.subtotal);
         setCounter(counter - 1);
         
+        
         fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.productId}`, {
         method: 'POST',
         credentials: 'include',
@@ -68,6 +71,7 @@ export default function CartProduct(props) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json(); // Assuming the response is in JSON format
+        
       })
       // .then(response => {
       //   setCartChange(response)
@@ -83,38 +87,35 @@ export default function CartProduct(props) {
     
 
 
-    // function remove () {
-    //   fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.productId}`, {
-    //     method: 'POST',
-    //     credentials: 'include',
-    //     headers: {
-    //       'Accept': 'application/json',
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       quantity:props.card.qty
-    //     })
-    //   })
+    function remove () {
+      fetch(`https://shopery.onrender.com/api/v1/cart/remove/${props.card.productId}`, {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          quantity:props.card.qty
+        })
+      })
       
-    //   .then(response => {
-    //     if (!response.ok) {
-    //       throw new Error(`HTTP error! Status: ${response.status}`);
-    //     }
-    //     return response.json(); // Assuming the response is in JSON format
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json(); // Assuming the response is in JSON format
         
-    //   })
-    //   // .then(response => {
-    //   //   setCartChange(response);
-    //   //   window.location.reload();
-    //   // })
+      })
       
-    //   .catch(error => {
-    //     // Handle errors
-    //     console.error('Error:', error);
+      
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
   
-    // });
+    });
   
-    // };
+    };
     
 
 
@@ -126,7 +127,7 @@ export default function CartProduct(props) {
         <div className="ct-wrp">
             <div className="img-txt">
                 <div className='small-img'>
-                    <img  src={props.card.image} alt=''/>
+                    <img  src={props.card.Image} alt=''/>
                 </div>
                 
                 <p>{props.card.name}</p>
@@ -143,7 +144,7 @@ export default function CartProduct(props) {
                             </div>
             </div>
             <p className='sb-ttl'>${counter * props.card.price}</p>
-            <button onClick={()=>{console.log("clicked")}} className='rmv-prd-btn'><img src={close} alt='' /></button>
+            <button onClick={remove} className='rmv-prd-btn'><img src={close} alt='' /></button>
 
 
         </div>

@@ -5,6 +5,7 @@
     align-items: center;
     border-radius: 1.5em;
     height: 100%;
+    width: 100%;
 }
 
 .row1,  .row3{
@@ -115,6 +116,11 @@ margin-bottom: 0.5em;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+}
+
+.new-price > b {
+    text-decoration-line: line-through ;
+    font-weight: 600;
 }
 
 .discount-price{

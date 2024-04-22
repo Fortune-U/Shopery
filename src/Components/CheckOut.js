@@ -9,7 +9,7 @@ export default function CheckOut() {
             <main>
                 <p className="bill-add">Billing Address</p>
               <form>
-                <div className="first-inputs">
+                {/* <div className="first-inputs">
                     <div>
                     <label htmlFor="">First name</label>
                     <br/>
@@ -28,13 +28,18 @@ export default function CheckOut() {
                     </div>
                     
                     
-                </div>
+                </div> */}
                 <div className="second-inputs">
                     <label htmlFor="address">Street Address</label>
                     <br/>
                     <input type="text" placeholder="6 eddy okeke" name="address" />
                 </div>
-                <div className="third-inputs">
+                <div>
+                    <label htmlFor="">Phone</label>
+                    <br/>
+                    <input type="text" placeholder="+23490"/>
+                    </div>
+                {/* <div className="third-inputs">
                     <div>
                     <label htmlFor="country">Country / Region</label>
                     <br/>
@@ -65,12 +70,8 @@ export default function CheckOut() {
                     <input type="text" placeholder="Email" />
                     </div>
 
-                    <div>
-                    <label htmlFor="">Phone</label>
-                    <br/>
-                    <input type="text" placeholder="+23490"/>
-                    </div>
-                </div>
+                   
+                </div> */}
                 <div className="ship-chck">
                     <input type="checkbox" />
                     <p>Ship to a different address</p>

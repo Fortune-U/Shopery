@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className='section-one-blk2'>
                     <p className='blk1'>Suscribe to our Newsletter </p>
                     
-                    <p className='blk2-light'>Pellentesque eu nibh eget mauris congue mattis matti.</p>
+                    <p className='blk2-light'>Subscribe to get latest news and updates.</p>
                     
                 </div>
                 <div>
@@ -27,11 +27,11 @@ export default function Footer() {
             <section className='section-two'>
                 <div className='left'>
                     <h3 className='left-head'>About Shopery</h3>
-                    <p className='left-desc'>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    <p className='left-desc'> we are your trusted partner in providing fresh, organic, and wholesome groceries right at your doorstep.</p>
                     <span>
-                    <p className='bold'>(219) 555-0114</p>
+                    <p className='bold'>+2349066021425</p>
                     <p className='lighter'>or</p>
-                    <p className='bold'>Proxy@gmail.com</p>
+                    <p className='bold'>fortuneeziefula3@gmail.com</p>
                     </span>
                     
                 </div>
@@ -40,7 +40,7 @@ export default function Footer() {
                     <ul>
                     <h3>My Account</h3>
                         <li><Link to="/account">My Account</Link></li>
-                        <li>Order History</li>
+                        <li><Link to ="/account">Order History</Link></li>
                         <li><Link to="/cart">Shopping Cart</Link></li>
                         <li>Wishlist</li>
                         <li>Settings</li>

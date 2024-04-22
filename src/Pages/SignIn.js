@@ -61,6 +61,10 @@ export default function SignIn() {
     
   }
 
+  let cookie = document.cookie
+
+  console.log(cookie)
+
     return(
     <div className="signin-wrp">
       <div className="signin-bd">

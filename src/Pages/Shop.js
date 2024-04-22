@@ -222,7 +222,9 @@ const toggleElement = (element) => {
             </div>
         </div>
         <div className="shop-products-panel">
+          <div>
          {shopProducts}
+         </div>
         </div>
       </div>
       <Footer/>

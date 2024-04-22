@@ -1,7 +1,42 @@
+import { useEffect, useState } from "react";
 import OrderItem from "../Components/OrderItem";
 import '../Styles/orderhistory.css';
 
 export default function OrderHistory() {
+const [orders, setOrders] = useState([])
+
+useEffect(()=>{
+    fetch('https://shopery.onrender.com/api/v1/orders/me', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        
+      })
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return res.json();
+  })
+  .then((data) => {
+    setOrders(data);
+  })
+  .catch((error) => {
+    console.error('API Error:', error);
+  });
+},[])
+
+        const mapOrders = orders.map(card=>{
+            return(
+            <OrderItem
+            card={card}
+            id={card.id}
+            />
+        )})
+    
     return (
         <div className="ord-h-wrp">
 
@@ -17,7 +52,7 @@ export default function OrderHistory() {
             </div>
 
             <div>
-                <OrderItem />
+                {mapOrders}
             </div>
         </div>
     );

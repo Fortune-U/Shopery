@@ -55,8 +55,6 @@ export default function Account () {
                     <div className="icons">
                     <img src={dashIcon} alt=""/>
                     <img src={orderHistoryIcn} alt=""/>
-                    <img src={wishlist} alt=""/>
-                    <img src={shoppingBag} alt=""/>
                     <img src={settingsIcn} alt=""/>
                     <img src={logoutIcn} alt=""/>
 
@@ -65,8 +63,6 @@ export default function Account () {
                     <div className="lst-navs">
                     <p onClick={()=>toggleElement("dashboard")}>Dashboard</p>
                     <p onClick={()=>toggleElement("orderhistory")}>Order History</p>
-                    <p onClick={()=>toggleElement("wishlist")}>Wishlist</p>
-                    <p onClick={()=>toggleElement("shoppingcart")}>Shopping Cart</p>
                     <p onClick={()=>toggleElement("settings")}>Settings</p>
                     <p onClick={logout}>Log-out</p>
                     </div>

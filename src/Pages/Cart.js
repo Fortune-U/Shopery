@@ -1,12 +1,15 @@
 import Footer from "../Components/Footer";
-import { Outlet, Link, useNavigate } from "react-router-dom"
+import {  Link, useNavigate } from "react-router-dom"
 import CartProduct from "../Components/CartProduct";
 import React, { useState, useEffect } from "react";
 import '../Styles/cart.css'
 
 export default function Cart() {
     const [getCart, setGetCart] = useState({ cart:[]});
+    const [cartTotal, setCartTotal] = useState(0)
     let cartItems = getCart.cart;
+
+    console.log(cartItems)
 
     const navigate = useNavigate();
 
@@ -23,6 +26,7 @@ export default function Cart() {
         })
         .then((data) => {
           setGetCart(data);
+          setCartTotal(data.total);
           
         })
 
@@ -32,7 +36,9 @@ export default function Cart() {
         });
     },[]);
 
-    
+    function updateCartTotal(newTotal) {
+        setCartTotal(newTotal);
+      }
    
     let Shipping = 5;
     
@@ -44,6 +50,7 @@ export default function Cart() {
         <CartProduct  
         key={card.id}
         card={card}
+        updateCartTotal={updateCartTotal}
         />
         )
     });
@@ -89,7 +96,7 @@ export default function Cart() {
                     <p className="crt-ttl">Cart Total</p>
                     <div>
                         <p className="crt-light">Subtotal:</p>
-                        <p className="crt-bld">${getCart.total}</p>
+                        <p className="crt-bld">${cartTotal}</p>
                     </div>
                     <div>
                         <p className="crt-light">Shipping:</p>
@@ -97,7 +104,7 @@ export default function Cart() {
                     </div>
                     <div>
                         <p className="crt-light">Total:</p>
-                        <p className="crt-bld">$ {getCart.total + Shipping}</p>
+                        <p className="crt-bld">$ {cartTotal + Shipping}</p>
                     </div>
                     <button className="ptd" onClick={handleNavigate}>Procced to Checkout</button>
                 </aside>

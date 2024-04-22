@@ -75,6 +75,15 @@ export default function FruitCard(props) {
   //     })
   //   }
 
+  const viewProd =  (card)=>
+  
+  <ProdQuickview 
+  key={card.id}
+  card={card}
+  prod={view}
+
+  />
+
     function toggleQuickView() {
       
       setViewed(prevView=>({
@@ -278,17 +287,14 @@ switch (rating) {
     return(
         
             <div className='main' style={divStyle} onMouseEnter={handleMouseEntered} onMouseLeave={handleMouseLeave}>
-                <div className='img-wrp'>
+                <div className='img-wrp'  onClick={() => {setOpen(o => !o); toggleQuickView();}}>
                     <img src={props.card.productThumbnail} alt="" />
                     <div className='quick-actions' style={quickViewStyle} >
-                        <img src={WishlistIcon} alt='' onClick={toggleAddToWishlist} />
-                        <img src={quickView} alt='' onClick={() => {setOpen(o => !o); toggleQuickView();}} />
+                        {/* <img src={WishlistIcon} alt='' onClick={toggleAddToWishlist} />
+                        <img src={quickView} alt='' onClick={() => {setOpen(o => !o); toggleQuickView();}} /> */}
                         <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
                         
-                        <ProdQuickview 
-                        prod={view}
-                        
-                        />
+                        {viewProd}
                         </Popup>
                     </div>
                 </div>

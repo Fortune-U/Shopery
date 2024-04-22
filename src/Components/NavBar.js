@@ -20,6 +20,7 @@ export default function NavBar() {
 
     // declaration fot he chef ai pop up
     const [isOpen, setIsOpen] = useState(false);
+    const [sidecart, setsidecart] = useState(false);
     //if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
      
     // const  toggleAI = () => {
@@ -42,8 +43,9 @@ export default function NavBar() {
                 </div>
                 <button onClick={()=>setIsOpen(true)}>Open AI</button>
                 <button onClick={()=>setIsOpen(false)}>Close AI</button>
+                <button onClick={()=>setsidecart(false)}>Close cart</button>
                 <div className="first-layer-right">   
-                    <div className="selections"> 
+                    {/* <div className="selections"> 
                         <select className="lang" >
                             <option >ENG</option>
                             <option >ESP</option>
@@ -54,7 +56,7 @@ export default function NavBar() {
                             <option >NGN</option>
                             <option >GHC</option>
                         </select>
-                    </div>
+                    </div> */}
                     <p>
                         <Link className='signin' to="/signin">
                             Sign In / Sign Up
@@ -88,19 +90,19 @@ export default function NavBar() {
                 <button className='srch-btn'>Search</button>
                 </div>
                 <div className="second-layer-three">
-                    <p className="secondlayer-liked">
+                    {/* <p className="secondlayer-liked">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                         <path d="M15.9995 28.5722C-10.6667 13.8333 7.99999 -2.16666 15.9995 7.95075C24 -2.16666 42.6666 13.8333 15.9995 28.5722Z" stroke="#1A1A1A" strokeWidth="1.5"/>
                         </svg>
-                    </p>
-                    <p className='bag' onClick={() => setOpen(o => !o)}> 
+                    </p> */}
+                    <p className='bag' onClick={()=>{setsidecart(true)}}> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
                         <path d="M11.3333 14.6667H7.08333L4.25 30.25H29.75L26.9167 14.6667H22.6667M11.3333 14.6667V10.4167C11.3333 7.28705 13.8704 4.75 17 4.75V4.75C20.1296 4.75 22.6667 7.28705 22.6667 10.4167V14.6667M11.3333 14.6667H22.6667M11.3333 14.6667V18.9167M22.6667 14.6667V18.9167" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </p>
                     <div className="cart-side">
-                        <p className='shp-crt' >Shopping cart:</p>
-                        <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
+                        {/* <p className='shp-crt' >Shopping cart:</p> */}
+                        {/* <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
                         <div className='cart-modal'>
                         <div className='sc-wrapper'>
             <div className='sc-header'>
@@ -156,8 +158,8 @@ export default function NavBar() {
         </div>
                         </div>
                         
-                        </Popup>
-                        <p className='amnt'>$57.00</p>
+                        </Popup> */}
+                        <p className='amnt'></p>
                     </div>
                 </div>
             </div>
@@ -168,7 +170,7 @@ export default function NavBar() {
                     <ul className='nav-link'>
                         <li><Link className='nav-link' to='/'>Home</Link></li>
                         <li><Link className='nav-link' to="/shop">Shop</Link> </li>
-                        <li><Link className='nav-link' to="/blog">Blog</Link> </li>
+                        {/* <li><Link className='nav-link' to="/blog">Blog</Link> </li> */}
                         <li><Link className='nav-link' to="/about">About Us</Link></li>
                         <li><Link className='nav-link' to="/contactus">Contact Us</Link></li>
                     </ul>
@@ -180,12 +182,13 @@ export default function NavBar() {
                     <path d="M16.5306 7.75687C17.4205 7.99625 18.2318 8.46521 18.8833 9.11678C19.5349 9.76835 20.0039 10.5797 20.2433 11.4695" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M10.115 13.6517C11.0224 15.5074 12.5263 17.0049 14.3859 17.9042C14.522 17.9688 14.6727 17.9966 14.8229 17.9851C14.9731 17.9736 15.1178 17.9231 15.2425 17.8386L17.9812 16.0134C18.1022 15.9326 18.2414 15.8833 18.3862 15.8698C18.5311 15.8564 18.677 15.8793 18.8107 15.9364L23.9339 18.1326C24.1079 18.2065 24.2532 18.335 24.3479 18.4987C24.4426 18.6623 24.4815 18.8523 24.4589 19.04C24.2967 20.307 23.6784 21.4714 22.7196 22.3154C21.7608 23.1593 20.5273 23.6249 19.25 23.625C15.3049 23.625 11.5214 22.0578 8.73179 19.2682C5.94218 16.4786 4.375 12.6951 4.375 8.75C4.37512 7.47279 4.84074 6.23941 5.68471 5.28077C6.52867 4.32213 7.6931 3.70396 8.96 3.542C9.14771 3.51936 9.33769 3.55832 9.50134 3.653C9.66499 3.74769 9.79345 3.89298 9.86738 4.067L12.0654 9.1945C12.1219 9.32698 12.1449 9.47137 12.1322 9.61485C12.1195 9.75833 12.0716 9.89647 11.9928 10.017L10.1728 12.7977C10.0901 12.923 10.0414 13.0675 10.0313 13.2171C10.0212 13.3668 10.05 13.5165 10.115 13.6517V13.6517Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    <p>(219) 555-0114</p>
+                    <p>+2349066021425</p>
                 </div>
             </div>
             
 )}         
         {isOpen && (<ChefAi />) }
+        {sidecart && (<SideCart />)}
             <Outlet />
             
         </div>

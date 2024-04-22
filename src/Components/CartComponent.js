@@ -23,7 +23,7 @@ export default function CartComponent() {
         .catch((error) => {
           console.error('API Error:', error);
         });
-    },[getCart]);
+    },[]);
 
     console.log(getCart)
 

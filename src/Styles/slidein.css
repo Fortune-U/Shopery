@@ -106,16 +106,22 @@
 
   .matched-prod-ctn{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em 1em;
     
   }
 
   .matched-prod {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 1em 1em;
-    gap: 1em;
     flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 1em 1em; */
+    gap: 1em;
+   
+    
 
     
 
@@ -124,8 +130,13 @@
     
   }
 
+  .matched-prod > img {
+    width: 100px;
+  }
+
   .matchcomp{
-    width: 160px;
-    max-width: 160px;
+    
+    width: 47%;
     transition: opacity 0.5s ease-in-out;
+    
   }
