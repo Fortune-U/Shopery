@@ -11,6 +11,7 @@ import OrderHistory from "./OrderHistory";
 import CartComponent from "../Components/CartComponent"
 import { useState } from "react";
 import AccSettings from "../Components/AccSettings";
+import { useNavigate, Link } from "react-router-dom";
 
 
 export default function Account () {
@@ -19,6 +20,8 @@ export default function Account () {
     const toggleElement = (element) => {
         setActiveElement(element);
     };
+
+    const navigate = useNavigate();
 
     function logout(){
         fetch('https://shopery.onrender.com/api/v1/auth/logout', {
@@ -34,7 +37,11 @@ export default function Account () {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.json(); // Assuming the response is in JSON format
+        setTimeout(()=>{
+          navigate("/")
+        },3000);
+        return response.json();
+         // Assuming the response is in JSON format
       })
 
       .catch(error => {

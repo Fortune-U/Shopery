@@ -2,6 +2,7 @@ import Footer from "../Components/Footer";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import '../Styles/signin.css'
+import x from '../Assets/9079476.png'
 
 export default function SignIn() {
   const [auth, setAuth] = useState({
@@ -9,6 +10,9 @@ export default function SignIn() {
     password:"",
     //isRemembered:false,
   })
+
+  const [feedback, SetFeedback] = useState("")
+  const [successFeedback, SetSuccessFeedback] = useState("")
    
   const navigate = useNavigate();
 
@@ -33,14 +37,22 @@ export default function SignIn() {
       })
       .then(response => {
         if (response.message === "Success") {
+          SetSuccessFeedback("Login Successful");
+
+          setTimeout(()=>{
             navigate("/")
+          },3000);
+            
            
         }
       })
       .catch(error => {
         // Handle errors
         console.error('Error:', error);
-  
+        SetFeedback(error.message);
+        setTimeout(()=>{
+          SetFeedback('')
+        },3000)
       })
     
    
@@ -84,6 +96,13 @@ export default function SignIn() {
                 name="password" 
                 value={auth.password}
                 onChange={handleChange}  />
+                <div className="err-handling">
+                  
+                {feedback}
+                </div>
+                <div className="success-handling">
+                {successFeedback}
+                </div>
                 
                 <div className="rmb-fgp-ctn">
                     <div className="rmb-ctn">
@@ -111,6 +130,7 @@ export default function SignIn() {
                 
                 
 
+                
             </form>
       </div>
       <Footer />
