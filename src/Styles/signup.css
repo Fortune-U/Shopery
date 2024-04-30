@@ -24,7 +24,7 @@
 
 .su-inp1,.su-inp2,.su-inp3,.su-inp4,.su-inp5{
     display: flex;
-    padding: 14px 16px;
+    padding: 14px 0px 14px 16px;
     width: 30em;
     max-width: 30em;
     justify-content: center;
@@ -34,6 +34,7 @@
     border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
     background: var(--Gray-Scale-White, #FFF);
     margin: 0.4em 0em;
+    outline: none;
 }
 
 .rmb-fgp-ctn{
@@ -116,4 +117,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1em;
+}
+
+.err-txt{
+    font-size: 12px;
+    color: red;
+}
+
+.reg-success{
+    font-size: 12px;
+    text-align: center;
+    color: #00B207;
 }
