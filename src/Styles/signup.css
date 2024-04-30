@@ -26,6 +26,7 @@
     display: flex;
     padding: 14px 16px;
     width: 30em;
+    max-width: 30em;
     justify-content: center;
     align-items: center;
     gap: 10px;

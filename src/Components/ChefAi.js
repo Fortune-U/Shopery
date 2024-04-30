@@ -6,12 +6,15 @@ import React from 'react';
 import send from '../Assets/send.png';
 import close from '../Assets/Close.svg'
 import FruitCard from './FruitCard';
+import { useDispatch, useSelector } from 'react-redux';
+import { newChatState } from '../features/chatControl';
 
 
 
 export default function ChefAi () {
     
-
+    //const isopen = useSelector((state)=>state.chatcontrol.value);
+    const dispatch = useDispatch()
     // const toggleSlideIn = () => {
     //   setIsOpen(!isOpen);
     // };
@@ -19,7 +22,7 @@ export default function ChefAi () {
     const [inputValue, setInputValue] = useState('');
     const [response, setResponse] = useState('');
     const [prodData, setProdData] = useState([]);
-    const [productData, setProductData] = useState([]);
+   // const [productData, setProductData] = useState([]);
     const [matchTextRes, setMatchTextRes] = useState('');
     const [isTyping, setIsTyping] = useState(false); // Flag for typing state
 
@@ -83,7 +86,7 @@ export default function ChefAi () {
  
  
 
-  console.log(prodData)
+ 
 
 //   const handleKeyDown = (event) => {
 //     if (event.key === 'Enter' && isTyping) {
@@ -132,7 +135,7 @@ export default function ChefAi () {
       }
   };
 
-  console.log(matchTextRes)
+
 
 // Function to extract objects from the JSON data that contain matched tags
     function extractObjectsFromText(text, data) {
@@ -152,8 +155,8 @@ export default function ChefAi () {
     // Example usage
     const text = matchTextRes;
     const matchedObjects = extractObjectsFromText(text, prodData);
-    console.log("Matched Objects:", matchedObjects);
-    console.log(text)
+    
+    
 
   
   
@@ -184,7 +187,7 @@ export default function ChefAi () {
                 <br/>
                 what can i help you with;
             </div> */}
-            <div className='close-btn'>
+            <div className='close-btn' onClick={()=>{dispatch(newChatState(false))}}>
                 <img src={close} alt='' />
             </div>
             <p className='ttl'>Nwa boi</p>

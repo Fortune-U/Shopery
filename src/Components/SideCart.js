@@ -3,8 +3,12 @@ import { useState,useEffect } from 'react';
 //import Popup from 'reactjs-popup';
 import { Link} from "react-router-dom";
 import CartProduct from './CartProduct';
+import { useDispatch } from 'react-redux';
+import { newCartWindowState } from '../features/sideCartControl';
 
 export default function SideCart() {
+
+  const dispatch = useDispatch();
 
   const [carted, setCarted] = useState([]);
   const [ total, settotal] = useState("");
@@ -44,7 +48,7 @@ export default function SideCart() {
                 <p>
                      Shopping Cart ({carted.length})
                 </p>
-                <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <svg onClick={()=>{dispatch(newCartWindowState(false))}}  xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                     <path d="M18.75 6.25L6.25 18.75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.25 6.25L18.75 18.75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>

@@ -11,6 +11,8 @@ import priceRangeReducer from './features/priceRange';
 import categorizeReducer from './features/categorize';
 import ratingReducer from './features/rating';
 import tagReducer from './features/tag';
+import chatContolReducer from './features/chatControl';
+import sideCartControlReducer from './features/sideCartControl';
 
  const store = configureStore({
   reducer: {
@@ -18,6 +20,8 @@ import tagReducer from './features/tag';
     categorize : categorizeReducer,
     rating : ratingReducer,
     tag : tagReducer,
+    controlchat : chatContolReducer,
+    controlsidecart : sideCartControlReducer,
   },
 })
 

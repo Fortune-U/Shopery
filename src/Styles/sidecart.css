@@ -54,6 +54,10 @@
     line-height: 150%; /* 30px */
 }
 
+.sc-header > svg{
+    cursor: pointer;
+}
+
 .sc-bott-ctn{
     display: flex;
     justify-content: center;

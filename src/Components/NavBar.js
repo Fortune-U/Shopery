@@ -1,11 +1,13 @@
 import '../Styles/navbar.css';
-import { useState } from 'react'
-import Popup from 'reactjs-popup';
+//import { useState } from 'react'
 import 'reactjs-popup/dist/index.css';
 import '../Styles/sidecart.css';
 import SideCart from './SideCart';
 import { Outlet, Link , useLocation } from "react-router-dom"
 import ChefAi from './ChefAi';
+import {  useDispatch, useSelector } from 'react-redux';
+import { newChatState } from '../features/chatControl';
+import {newCartWindowState} from '../features/sideCartControl';
 
 
 
@@ -14,19 +16,14 @@ const hideNavbarRoutes = ["/admin"];
 
 export default function NavBar() {
     const {pathname} = useLocation();
-    const [open, setOpen] = useState(false);
-    const closeModal = () => setOpen(false);
+    const chatopen = useSelector((state)=>state.controlchat.value);
+    const sideCartOpen = useSelector((state)=>state.controlsidecart.value);
+    console.log(sideCartOpen)
+
+    const dispatch = useDispatch()
     const hideNavbar = hideNavbarRoutes.includes(pathname);
 
-    // declaration fot he chef ai pop up
-    const [isOpen, setIsOpen] = useState(false);
-    const [sidecart, setsidecart] = useState(false);
-    //if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
      
-    // const  toggleAI = () => {
-    //    setIsOpen = true
-    // }
-    
 
     return(
        
@@ -41,9 +38,7 @@ export default function NavBar() {
 
                     <p>Store location- 6 durusonmi-etti, phase 1</p>
                 </div>
-                <button onClick={()=>setIsOpen(true)}>Open AI</button>
-                <button onClick={()=>setIsOpen(false)}>Close AI</button>
-                <button onClick={()=>setsidecart(false)}>Close cart</button>
+                {/* <button >Open AI</button> */}
                 <div className="first-layer-right">   
                     {/* <div className="selections"> 
                         <select className="lang" >
@@ -95,7 +90,7 @@ export default function NavBar() {
                         <path d="M15.9995 28.5722C-10.6667 13.8333 7.99999 -2.16666 15.9995 7.95075C24 -2.16666 42.6666 13.8333 15.9995 28.5722Z" stroke="#1A1A1A" strokeWidth="1.5"/>
                         </svg>
                     </p> */}
-                    <p className='bag' onClick={()=>{setsidecart(true)}}> 
+                    <p className='bag' onClick={()=>{dispatch(newCartWindowState(true))}}> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
                         <path d="M11.3333 14.6667H7.08333L4.25 30.25H29.75L26.9167 14.6667H22.6667M11.3333 14.6667V10.4167C11.3333 7.28705 13.8704 4.75 17 4.75V4.75C20.1296 4.75 22.6667 7.28705 22.6667 10.4167V14.6667M11.3333 14.6667H22.6667M11.3333 14.6667V18.9167M22.6667 14.6667V18.9167" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
@@ -173,6 +168,7 @@ export default function NavBar() {
                         {/* <li><Link className='nav-link' to="/blog">Blog</Link> </li> */}
                         <li><Link className='nav-link' to="/about">About Us</Link></li>
                         <li><Link className='nav-link' to="/contactus">Contact Us</Link></li>
+                        <li onClick={() => dispatch(newChatState(true))} className='nav-link'> Nwa Boi(AI)</li>
                     </ul>
 
                 </div>
@@ -187,8 +183,8 @@ export default function NavBar() {
             </div>
             
 )}         
-        {isOpen && (<ChefAi />) }
-        {sidecart && (<SideCart />)}
+        {chatopen && (<ChefAi />) }
+        {sideCartOpen && (<SideCart />)}
             <Outlet />
             
         </div>
