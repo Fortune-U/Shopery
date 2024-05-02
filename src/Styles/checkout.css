@@ -220,7 +220,18 @@
 
 .it-cmps{
     height: 150px;
+    overflow-y: auto;
 }
+
+.it-cmps::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .it-cmps {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .sb-line, .sb-line2, .sb-line3 {
     margin: 0.5em 0em;
@@ -286,7 +297,7 @@
     border: 0px solid white;
 }
 
-.payment-box > form > button {
+.paystack-button{
     border-radius: 43px;
     background: var(--Branding-Success, #00B207);
     display: flex;

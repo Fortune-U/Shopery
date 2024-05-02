@@ -9,7 +9,6 @@ export default function Cart() {
     const [cartTotal, setCartTotal] = useState(0)
     let cartItems = getCart.cart;
 
-    console.log(cartItems)
 
     const navigate = useNavigate();
 

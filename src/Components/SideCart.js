@@ -64,8 +64,8 @@ export default function SideCart() {
             <p>${total}</p>
             </div>  
             <div className='sc-btns'>
-            <Link to="/checkout"><button className='sc-check' >Checkout</button></Link>
-            <Link to="/cart">  <button className='sc-gtc' >Go to Cart</button></Link>
+            <Link to="/checkout"><button className='sc-check' onClick={()=>{dispatch(newCartWindowState(false))}} >Checkout</button></Link>
+            <Link to="/cart">  <button className='sc-gtc' onClick={()=>{dispatch(newCartWindowState(false))}} >Go to Cart</button></Link>
             </div>
             </div>
             </div>

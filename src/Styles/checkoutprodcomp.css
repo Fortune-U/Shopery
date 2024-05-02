@@ -7,6 +7,15 @@
 
 .comp-img{
 width: 20%;
+max-width: 20%;
+height: 20%;
+border-radius: 10px;
+}
+
+.comp-img > img{
+    width: 100%;
+height: 100%;
+
 }
 
 .comp-blk{

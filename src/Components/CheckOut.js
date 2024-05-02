@@ -1,8 +1,83 @@
 import Footer from "./Footer";
 import '../Styles/checkout.css';
 import CheckOutProdComp from "./CheckOutProdComp";
+import { useState,useEffect } from "react";
+import { PaystackButton } from 'react-paystack';
 
 export default function CheckOut() {
+
+ 
+
+  const [checkprod, setCheckProd] = useState({ cart:[]});
+  const [priceTotal, setPriceTotal] = useState (0)
+
+  //Paystack integrations
+  const config = {
+    reference: Math.floor(Math.random() * 100000000).toString(),
+    email: "user@example.com",
+    amount: 20000, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+    publicKey: 'pk_test_31c13a73391c4918b06a89799792a5f6c445314d',
+  };
+
+  const handlePaystackSuccessAction = (reference) => {
+    // Implementation for whatever you want to do with reference and after success call.
+    console.log(reference);}
+  
+  
+
+    // you can call this function anything
+    const handlePaystackCloseAction = () => {
+      // implementation for  whatever you want to do when the Paystack dialog closed.
+      console.log('closed')
+    }
+
+    const componentProps = {
+        ...config,
+        text: 'Place order',
+        onSuccess: (reference) => handlePaystackSuccessAction(reference),
+        onClose: handlePaystackCloseAction,
+    };
+
+  
+  useEffect(() =>{
+    
+    fetch('https://shopery.onrender.com/api/v1/cart',{
+        method: 'GET',
+        credentials: 'include',
+        })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setCheckProd(data);
+      setPriceTotal(data.total)
+      
+    })
+
+
+    .catch((error) => {
+      console.error('API Error:', error);
+    });
+},[]);
+
+
+
+
+
+const mappedProd = checkprod.cart
+.filter(card => card.qty > 0)
+.map(card=>{
+  return(
+  <CheckOutProdComp
+  key={card.id}
+  card={card}
+  />
+  )
+  });
+
     return(
         <div className="checkout-wrp">
          <div className="checkout-bd">
@@ -86,7 +161,7 @@ export default function CheckOut() {
             </main>
             <aside>
               <div className="asi-title">Order summary</div>
-              <div className="it-cmps"><CheckOutProdComp /><CheckOutProdComp /></div>
+              <div className="it-cmps">{mappedProd}</div>
               <div className="sb-line">
                 <p className="lght">Subtotal:</p>
                 <p className="bld">85$</p>
@@ -99,25 +174,25 @@ export default function CheckOut() {
 
               <div className="sb-line3">
                 <p className="lght">Total:</p>
-                <p className="bld">85$</p>
+                <p className="bld">{priceTotal}$</p>
               </div>
               <div className="payment-box">
                 <p>Payment Method</p>
                 <form>
-                <input type="radio"  name="pay" id="cod" />
-                <label htmlFor="cod">Cash on delivery</label>
-                <br/>
+                
                 <input type="radio"  name="pay" id="card" />
-                <label htmlFor="card">Card</label>
+                <label htmlFor="card">Paystack</label>
                 <br/>
-                <input type="radio"  name="pay" id="bt" />
+                {/* <input type="radio"  name="pay" id="bt" />
                 <label htmlFor="bt">Bank transfer</label>
                 <br/>
                 <input type="radio"  name="pay" id="crypto" />
                 <label htmlFor="crypto">Crypto</label>
-                <br/>
-                <button>Place Order</button>
+                <br/> */}
+                
+                
                 </form>
+                <PaystackButton className="paystack-button" {...componentProps} />
                 
 
               </div>

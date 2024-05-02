@@ -127,7 +127,7 @@ export default function CartProduct(props) {
         <div className="ct-wrp">
             <div className="img-txt">
                 <div className='small-img'>
-                    <img  src={props.card.Image} alt=''/>
+                    <img  src={props.card.image} alt=''/>
                 </div>
                 
                 <p>{props.card.name}</p>
