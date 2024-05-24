@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 import Footer from "../Components/Footer";
 import FruitCard from "../Components/FruitCard";
 import Banner from "../Components/Banner";
-import Tag from "../Components/Tag";
+//import Tag from "../Components/Tag";
 import '../Styles/shop.css';
 import ProductCard from "../Components/ProductCard";
-import PriceSlider from "../Components/PriceSlider";
+//import PriceSlider from "../Components/PriceSlider";
 import CategorySelector from "../Components/CategorySelector";
-import RatingSelector from "../Components/RatingSelector";
+//import RatingSelector from "../Components/RatingSelector";
 
 
 
@@ -26,9 +26,9 @@ export default function Shop() {
     tags:false
   });
   const categorize = useSelector((state) => state.categorize.value)
-  const price = useSelector((state) => state.priceRange.value)
-  const rating = useSelector((state) => state.rating.value)
-  const oneTag = useSelector((state)=> state.tag.value)
+  // const price = useSelector((state) => state.priceRange.value)
+  // const rating = useSelector((state) => state.rating.value)
+  // const oneTag = useSelector((state)=> state.tag.value)
   
 
   useEffect(() => {
@@ -126,7 +126,8 @@ const toggleElement = (element) => {
     </svg>            
     //Drop down funcrion 
     
-    
+   
+
     
   
 
@@ -162,7 +163,7 @@ const toggleElement = (element) => {
 
             </div>
             
-                <div>
+                {/* <div>
                     <button className="price-dropdown" onClick={()=>toggleElement("price")}>
                       <p>Price</p>
                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
@@ -172,12 +173,7 @@ const toggleElement = (element) => {
                     
                     {isOpen.price && (
                     <div>
-                      {/* <button>
-                      <p>Price slider</p>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                      <path d="M13 7L7 1L1 7" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </button> */}
+                     
                       
                       <PriceSlider/>
                     
@@ -210,7 +206,7 @@ const toggleElement = (element) => {
                 <div className="tag-ctn">
                 <Tag />
                 </div>
-                )}
+                )} */}
             </div>
             
             <div className="banner">
