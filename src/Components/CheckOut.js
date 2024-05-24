@@ -35,7 +35,7 @@ export default function CheckOut() {
   const [addressInUse, setAddressInUse] = useState({});
   const [user, setUser] = useState([]);
   const [deliveryFee, setDeliveryFee] = useState();
-
+  
   const addressId = useSelector((state)=>state.addressid.value);
   console.log(addressId);
  

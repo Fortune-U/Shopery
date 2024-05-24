@@ -132,6 +132,7 @@ export default function SimpleDialogDemo() {
      setAddresses(data.address);
      const lastAddress = data.address[data.address.length - 1]?.streetName || '';
       setSelectedValue(lastAddress);
+      
     
     
   })

@@ -26,7 +26,7 @@ export default function Admindashboard () {
 
     return(
         <div className="ad-wrp">
-            <div className="add-tt">Eko-bazar</div>
+            <div className="add-tt">Eko-baazar</div>
 
             <div className="ad-bd">
                 <div>

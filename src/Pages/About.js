@@ -55,8 +55,8 @@ export default function About () {
                <div>
                <div>
                 <div className="abt2-title">
-                <p className="abt-p3">Why Choose Eko-bazar ?</p>
-                <p className="abt-p4">What sets us apart is our commitment to sourcing from local farmers and producers who share our dedication to organic farming practices. By choosing Eko-bazar, you are not only prioritizing your health but also supporting local communities and promoting sustainable agriculture. </p>
+                <p className="abt-p3">Why Choose Eko-baazar ?</p>
+                <p className="abt-p4">What sets us apart is our commitment to sourcing from local farmers and producers who share our dedication to organic farming practices. By choosing Eko-baazar, you are not only prioritizing your health but also supporting local communities and promoting sustainable agriculture. </p>
                 </div>
                 
                 <div className="stuff-ctn" >
