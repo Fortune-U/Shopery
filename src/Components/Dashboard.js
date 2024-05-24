@@ -8,6 +8,8 @@ export default function Dashboard() {
     const [address, setAddress] = useState({});
     const [recentOrder, setRecentOrder] = useState([]);
 
+    
+
     const uuid = profile.uuid;
 
      useEffect(()=>{
@@ -34,7 +36,7 @@ export default function Dashboard() {
       });
 
 
-      fetch(`https://shopery.onrender.com/api/v1/user/address/${uuid}`, {
+      fetch(`https://shopery.onrender.com/api/v1/user/my-address`, {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -50,14 +52,19 @@ export default function Dashboard() {
         return res.json();
       })
       .then((data) => {
-        setAddress(data);
+        if (data.address && Array.isArray(data.address) && data.address.length > 0) {
+          setAddress(data.address[data.address.length - 1]);
+        } else {
+          // Handle the case where data.address is not defined or empty
+          console.error("No addresses found");
+        }
       })
       .catch((error) => {
         console.error('API Error:', error);
       });
 
      
-     },[uuid]);
+     },[]);
       
 
      console.log(address)
@@ -67,7 +74,7 @@ export default function Dashboard() {
 
             <div className="tp-sect">
                 <div className="ctc-crd">
-                    <div className="prf-photo"><img src={dummy} alt='' /></div>
+                    <div className="prf-photo"><img src={profile.profile_img} alt='' /></div>
                     <p className="disp-name">{profile.firstname}  {profile.lastname} </p>
                     <p className="disp-sts">Customer</p>
                     <p className="disp-act">Edit Profile</p>

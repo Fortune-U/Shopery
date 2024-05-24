@@ -13,6 +13,10 @@ import ratingReducer from './features/rating';
 import tagReducer from './features/tag';
 import chatContolReducer from './features/chatControl';
 import sideCartControlReducer from './features/sideCartControl';
+import addressDialogReducer from './features/addressDialog';
+import userIdReducer from './features/userId';
+import addressIdReducer from './features/addressId';
+
 
  const store = configureStore({
   reducer: {
@@ -22,6 +26,9 @@ import sideCartControlReducer from './features/sideCartControl';
     tag : tagReducer,
     controlchat : chatContolReducer,
     controlsidecart : sideCartControlReducer,
+    addressdialog : addressDialogReducer,
+    userid : userIdReducer,
+    addressid : addressIdReducer 
   },
 })
 

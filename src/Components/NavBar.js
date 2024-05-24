@@ -18,7 +18,6 @@ export default function NavBar() {
     const {pathname} = useLocation();
     const chatopen = useSelector((state)=>state.controlchat.value);
     const sideCartOpen = useSelector((state)=>state.controlsidecart.value);
-    console.log(sideCartOpen)
 
     const dispatch = useDispatch()
     const hideNavbar = hideNavbarRoutes.includes(pathname);

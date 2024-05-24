@@ -1,8 +1,10 @@
 import Footer from "../Components/Footer";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { newUserId } from "../features/userId";
 import '../Styles/signin.css'
-import x from '../Assets/9079476.png'
+
 
 export default function SignIn() {
   const [auth, setAuth] = useState({
@@ -10,6 +12,11 @@ export default function SignIn() {
     password:"",
     //isRemembered:false,
   })
+  const [userID, setUSerID] = useState('');
+  console.log(userID)
+
+  const dispatch = useDispatch();
+   
 
   const [feedback, SetFeedback] = useState("")
   const [successFeedback, SetSuccessFeedback] = useState("")
@@ -38,6 +45,7 @@ export default function SignIn() {
       .then(response => {
         if (response.message === "Success") {
           SetSuccessFeedback("Login Successful");
+          dispatch(newUserId(response.uuid));
 
           setTimeout(()=>{
             navigate("/")

@@ -172,3 +172,20 @@ padding: 1em 1em;
 border: none;
 cursor: pointer;
 }
+
+.prof-photo-ctn {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 120px;
+    overflow: hidden;
+    align-self: center;
+    margin-top: 1em;
+    border: 2px solid #E6E6E6;
+}
+
+  .prof-photo-ctn > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }

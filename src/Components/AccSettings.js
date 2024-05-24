@@ -88,8 +88,8 @@ const addy = address.houseNumber + ', ' + address.streetName  + ' ' + address.ci
 
            <aside>
             <div className="edit-prof-ctn">
-                <div className="prof-photo-ctn"><img src={dummyprofile} alt='' /></div>
-                <button className="chs-image">Choose image</button>
+                <div className="prof-photo-ctn"><img src={profile.profile_img} alt='' /></div>
+                
             </div>
            </aside>
         </div>

@@ -5,7 +5,7 @@ export default function CheckOutProdComp (props) {
     return(
         <div className="copm-wrp">
             <div className='comp-blk'>
-            <div className="comp-img"><img src={props.card.image} alt=''/></div>
+            <div className="comp-img"><img src={props.card.Image} alt=''/></div>
             <div className="comp-desc">{props.card.name} x {props.card.qty}</div>
             </div>
            

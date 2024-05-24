@@ -117,11 +117,13 @@
 
 .zip-cd > input{
     display: flex;
-    width: 240px;
+    width: 100%;
+    max-width: 340px;
     height: 39px;
     padding: 7px 6px;
     align-items: center;
     gap: 10px;
+    font-size: 1em;
     border-radius: 6px;
     border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
     background: var(--Gray-Scale-White, #FFF);
